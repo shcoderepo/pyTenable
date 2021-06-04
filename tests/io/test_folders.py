@@ -26,7 +26,7 @@ def test_folders_edit(api, folder):
     api.folders.edit(folder, str(uuid.uuid4())[:20])
 
 @pytest.mark.vcr()
-def test_folders_list(api, folder):
+def test_folders_list_success(api, folder):
     folders = api.folders.list()
     assert isinstance(folders, list)
     for f in folders:
@@ -36,3 +36,4 @@ def test_folders_list(api, folder):
         check(f, 'type', str)
         check(f, 'id', int)
         check(f, 'unread_count', int)
+

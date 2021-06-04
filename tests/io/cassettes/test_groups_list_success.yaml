@@ -1,0 +1,209 @@
+interactions:
+- request:
+    body: '{"name": "7c9242ef-6501-4b0a-b095-494ffa206a54"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '48'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
+        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
+      X-APIKeys:
+      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
+    method: POST
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/groups
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy3NQQrCQAxA0btk3UCSZtKMl5FJZwJdWEHsSry7Lbh//P+B49g63KDXDDETZO+M
+        SjXRRQTH4Nad0pUcJtjbY5x6WauojEQrdOqghkG1oFbNbELWip76KjPxLJUmWJ/7u237eN3/y1hM
+        3Dgw2qyozAs6jcCSSW6FrZeA7w8VKri3ogAAAA==
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 04 Jun 2021 12:21:46 GMT
+      Expect-CT:
+      - enforce, max-age=86400
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - accept-encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Gateway-Site-ID:
+      - nginx-router-tlf6d-us-east-1-eng
+      X-Path-Handler:
+      - tenable-io
+      X-Request-Uuid:
+      - 715cfa39939dee07f58856874a449325
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - nginx-cloud-site-id=qa-develop
+      User-Agent:
+      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
+        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
+      X-APIKeys:
+      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
+    method: GET
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/groups
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 04 Jun 2021 12:21:48 GMT
+      Expect-CT:
+      - enforce, max-age=86400
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - accept-encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Gateway-Site-ID:
+      - nginx-router-tlf6d-us-east-1-eng
+      X-Path-Handler:
+      - tenable-io
+      X-Request-Uuid:
+      - daffd8d4a1ac4e716a66092a49a85142
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Cookie:
+      - nginx-cloud-site-id=qa-develop
+      User-Agent:
+      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
+        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
+      X-APIKeys:
+      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
+    method: DELETE
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/groups/1013290
+  response:
+    body:
+      string: ''
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Fri, 04 Jun 2021 12:21:49 GMT
+      Expect-CT:
+      - enforce, max-age=86400
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Gateway-Site-ID:
+      - nginx-router-tlf6d-us-east-1-eng
+      X-Path-Handler:
+      - tenable-io
+      X-Request-Uuid:
+      - 6101dfba8d98895fa616154315feba53
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

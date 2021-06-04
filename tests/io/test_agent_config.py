@@ -97,7 +97,7 @@ def test_agentconfig_show_details(api):
     '''
     test to show agent_config details
     '''
-    resp = api.agent_config.details()
+    resp = api.agent_config.details(scanner_id=0)
     assert isinstance(resp, dict)
     check(resp, 'auto_unlink', dict)
     check(resp['auto_unlink'], 'enabled', bool)
@@ -111,3 +111,12 @@ def test_agentconfig_show_standard_user_should_fail(stdapi):
     '''
     with pytest.raises(PermissionError):
         stdapi.agent_config.details()
+
+@pytest.mark.vcr()
+def test_agentconfig_edit_success(api):
+    resp = api.agent_config.edit(scanner_id=0, software_update=True)
+    assert isinstance(resp, dict)
+    check(resp, 'auto_unlink', dict, allow_none=True)
+    check(resp, 'software_update', bool, allow_none=True)
+    check(resp['auto_unlink'], 'enabled', bool)
+    check(resp['auto_unlink'], 'expiration', int)

@@ -1,4 +1,4 @@
-from datetime import datetime as dtime, timedelta
+from datetime import datetime as dtime, timedelta, datetime
 from tenable.errors import *
 from ..checker import check, single
 import uuid, pytest
@@ -557,4 +557,43 @@ def test_agentexclusions_list_blackouts(api, agentexclusion):
     items = api.agent_exclusions.list()
     assert isinstance(items, list)
     a = items[0]
-    
+
+@pytest.mark.vcr()
+def test_agentexclusions_edit_all_success(api, agentexclusion):
+    freq = ['WEEKLY', 'MONTHLY', 'DAILY']
+
+    for f in freq:
+        resp = api.agent_exclusions.edit(exclusion_id=agentexclusion['id'],
+                                         name='some_name',
+                                         description='exclusion_description',
+                                         start_time=datetime.now(),
+                                         end_time=datetime.utcnow() + timedelta(hours=5),
+                                         timezone='UTC',
+                                         interval=20,
+                                         enabled=True,
+                                         frequency=f)
+
+        assert isinstance(resp, dict)
+
+        for _ in resp:
+            check(resp, 'description', str, allow_none=True)
+            check(resp, 'name', str, allow_none=True)
+            check(resp, 'uuid', str, allow_none=True)
+            check(resp, 'creation_date', int, allow_none=True)
+            check(resp, 'last_modification_date', int, allow_none=True)
+            check(resp, 'id', int, allow_none=True)
+            check(resp, 'core_updates_blocked', bool, allow_none=True)
+            check(resp, 'schedule', dict, allow_none=True)
+
+@pytest.mark.vcr()
+def test_agentexclusions_list_success(api):
+    resp = api.agent_exclusions.list(scanner_id=2)
+    assert isinstance(resp, list)
+    for i in range(len(resp)):
+        check(resp[i], 'description', str, allow_none=True)
+        check(resp[i], 'name', str, allow_none=True)
+        check(resp[i], 'uuid', str, allow_none=True)
+        check(resp[i], 'last_modification_date', int, allow_none=True)
+        check(resp[i], 'id', int, allow_none=True)
+        check(resp[i], 'core_updates_blocked', bool, allow_none=True)
+        check(resp[i], 'schedule', dict, allow_none=True)

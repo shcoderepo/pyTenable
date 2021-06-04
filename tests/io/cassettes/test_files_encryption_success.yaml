@@ -1,6 +1,7 @@
 interactions:
 - request:
-    body: null
+    body: "--1aac8e2d7b821fded786b1f1d4dfd18d\r\nContent-Disposition: form-data; name=\"no_enc\"\r\n\r\n1\r\n--1aac8e2d7b821fded786b1f1d4dfd18d\r\nContent-Disposition:
+      form-data; name=\"Filedata\"; filename=\"testfile.txt\"\r\n\r\ntest\r\n--1aac8e2d7b821fded786b1f1d4dfd18d--\r\n"
     headers:
       Accept:
       - '*/*'
@@ -9,20 +10,20 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '0'
-      Cookie:
-      - nginx-cloud-site-id=qa-develop
+      - '244'
+      Content-Type:
+      - multipart/form-data; boundary=1aac8e2d7b821fded786b1f1d4dfd18d
       User-Agent:
       - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
         (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
-    method: DELETE
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/credentials/4b9146a1-ef8e-489f-8b6e-513c34da7ec2
+    method: POST
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/file/upload
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA6tWSknNSS1JTVGyKikqTa0FAIR7ZyoQAAAA
+        H4sIAAAAAAAAA6tWSsvMSS0tyMlPTElNUbJSKkktLgEJ6ZVUlCjVAgCT1IAtHwAAAA==
     headers:
       Cache-Control:
       - no-store
@@ -31,11 +32,13 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json; charset=utf-8
       Date:
-      - Fri, 04 Jun 2021 12:58:14 GMT
+      - Fri, 04 Jun 2021 10:33:40 GMT
       Expect-CT:
       - enforce, max-age=86400
+      Expires:
+      - '0'
       Pragma:
       - no-cache
       Set-Cookie:
@@ -51,11 +54,11 @@ interactions:
       X-Frame-Options:
       - DENY
       X-Gateway-Site-ID:
-      - nginx-router-tlf6d-us-east-1-eng
+      - nginx-router-0evnh-us-east-1-eng
       X-Path-Handler:
       - tenable-io
       X-Request-Uuid:
-      - 8af36313c5300682caf19a6aaaed2ff7
+      - f0fb76b1e7380dbea8c8d48621a20bf6
       X-Xss-Protection:
       - 1; mode=block
     status:

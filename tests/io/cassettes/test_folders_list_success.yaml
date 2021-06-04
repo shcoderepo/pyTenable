@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"name": "7ab3124e-ec66-4adc-8d99-aefb743f6b68", "type": "load_balancing"}'
+    body: '{"name": "a24aab5a-46b1-464e-b"}'
     headers:
       Accept:
       - '*/*'
@@ -9,7 +9,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '74'
+      - '32'
       Content-Type:
       - application/json
       User-Agent:
@@ -18,15 +18,11 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: POST
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/scanner-groups
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/folders
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA3VP24rEIAz9lzxXaNVa7c9INHERWjuMlmFY9t/XLp3HhbzkJOf2DfHJ2PJRPGFj
-        WCcjpR3d4uwAG9bm94NyyvG/n+NV+OkzdfReYIX6ro13+FzP87qDCWNSC85CojNCKzWLoFIUZp7I
-        jqZPUp1DnPDcmn/wc8+1dtt6WQ5QIxYfj7M0WMcBbtW4mETOSqHngEJrHoVzLgntiLQyzIzUVdv7
-        0ZPDdiD5gBuWmMtXxwvuF75gUJPULDiang0pCkvOCeQUFq2SCcb277+e0mopP91u/t345xffQrDp
-        UAEAAA==
+        H4sIAAAAAAAAA6tWykxRsjI2MTOoBQCGLVLsCwAAAA==
     headers:
       Cache-Control:
       - no-store
@@ -37,9 +33,11 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 04 Jun 2021 12:29:58 GMT
+      - Fri, 04 Jun 2021 11:40:05 GMT
       Expect-CT:
       - enforce, max-age=86400
+      Expires:
+      - '0'
       Pragma:
       - no-cache
       Set-Cookie:
@@ -52,19 +50,21 @@ interactions:
       - accept-encoding
       X-Content-Type-Options:
       - nosniff
+      X-Frame-Options:
+      - DENY
       X-Gateway-Site-ID:
-      - nginx-router-0evnh-us-east-1-eng
+      - nginx-router-frc6f-us-east-1-eng
       X-Path-Handler:
       - tenable-io
       X-Request-Uuid:
-      - 84f7410a7040442c506ba0b3c26fab7c
-      X-XSS-Protection:
+      - a025c52d01696f50aa1063a9ed0950d0
+      X-Xss-Protection:
       - 1; mode=block
     status:
       code: 200
       message: OK
 - request:
-    body: '{"routes": ["127.0.0.1"]}'
+    body: null
     headers:
       Accept:
       - '*/*'
@@ -72,10 +72,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Content-Length:
-      - '25'
-      Content-Type:
-      - application/json
       Cookie:
       - nginx-cloud-site-id=qa-develop
       User-Agent:
@@ -83,38 +79,63 @@ interactions:
         (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
-    method: PUT
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/scanner-groups/128422/routes
+    method: GET
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/folders
   response:
     body:
-      string: ''
+      string: !!binary |
+        H4sIAAAAAAAAA62Yy2rbQBSGX6VobcHcL961aXfNokkWhVLM6OYojSRXGqdNQt69M7ZmpBIFgjjC
+        GxnzzZn/3P2cVN19UfZDsv3xnBzbvjTFLu+OrU22GG+S/DjYrkm2aJMUZWWO93Znzf70bh8PZbJN
+        bG+G22STtKbxrzfja104AH/ZvILqt6HuvBHamLqdmJePH65z0w7umxNWvMY6e4KpjvKGqeMvoq3u
+        6nt/9TNWkQVr12CvunaY20s1AiLflINlWNLRYiYYkBIevGOYqkhect0aMUYy4ySiodxnndE4UBWU
+        FJ4abVULMqwKNU+NblOQCiA0aSCBwqHpHspIXYreVRqYLC+CuzSUu46+Tvj05Xghy1bZ2bgnQCkG
+        ktS6J0KhKo2PKhaoDDaqJi5UVOXd4XGKVs4UlLROBYRCdnGmAbne5iAwX3Db6gAL6cU5VIn5k09M
+        qFDw1z+YwcZqwAVUlvnYHZWVCErZj7Yfn1s/k/i6IBEFioenYXj6G6lQBcw3yLrdBy6FCoe+PPXH
+        EBOSQaXxGWxj65UcSuCrL5dhxEMaqvAe298BipcG0lUZfFU2ZVEbW3ftaTSNJ0iozDtrHLiEQnG/
+        7U4TWQgLTBhUwB36rpglNSYSqlTkbisxrgZNRkuo6LBdYUKBx0RDqfz56/drLJBgSmuFseTBkRSs
+        1P13hOIojO6YIiiPxiM0wpQjGsZiTMFmLcYkimvd0joz20Hfv9g5aowVIaDkGExx/pghzLFYyIXW
+        RdcsSqdZbq6GXCjYs+X5/Wp48kOYaLHQYHoUlVOiCu6TFKrDnKQQOCaNFFAd5u42+3WXhdEAS7CE
+        90UVE8o4QjGeNYKaET6Zoc6xf4LYGkFNuRddc7h3LT2SCZTYQ9k/1PkEBptA2CSya4xQ5l5cp1S5
+        7WEUgggK5b7zIDY94QRNwNqY7+nnf/ImONRQXXAmOTMyJVjlKUOlTrN4CgU7Reuq0jhLS45wynAh
+        0+gKTaGczJUmlal4KkluUpYJNb8LlMMVZqISHKWE0iJlXJfzU6DqL2WKKMJZapxwzi+8Sk30C9hf
+        g4YwYzLuxBKZ84tg010oc9vgz5d/D/xdV0QWAAA=
     headers:
+      Accept-Ranges:
+      - bytes
       Cache-Control:
       - no-store
       Connection:
       - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '827'
+      Content-Type:
+      - application/json; charset=utf-8
       Date:
-      - Fri, 04 Jun 2021 12:29:59 GMT
+      - Fri, 04 Jun 2021 11:40:06 GMT
       Expect-CT:
       - enforce, max-age=86400
+      Expires:
+      - '0'
       Pragma:
       - no-cache
       Set-Cookie:
       - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
+      Vary:
+      - accept-encoding
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
       X-Gateway-Site-ID:
-      - nginx-router-0evnh-us-east-1-eng
+      - nginx-router-frc6f-us-east-1-eng
       X-Path-Handler:
       - tenable-io
       X-Request-Uuid:
-      - 55fb3e6bb0859c07dabe9c9845212b70
+      - bd35b56d0b5316d8e5d26b01c92add7c
       X-Xss-Protection:
       - 1; mode=block
     status:
@@ -139,7 +160,7 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: DELETE
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/scanner-groups/128422
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/folders/3460
   response:
     body:
       string: ''
@@ -148,28 +169,30 @@ interactions:
       - no-store
       Connection:
       - keep-alive
+      Content-Length:
+      - '0'
       Date:
-      - Fri, 04 Jun 2021 12:30:01 GMT
+      - Fri, 04 Jun 2021 11:40:07 GMT
       Expect-CT:
       - enforce, max-age=86400
+      Expires:
+      - '0'
       Pragma:
       - no-cache
       Set-Cookie:
       - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
       X-Gateway-Site-ID:
-      - nginx-router-0evnh-us-east-1-eng
+      - nginx-router-frc6f-us-east-1-eng
       X-Path-Handler:
       - tenable-io
       X-Request-Uuid:
-      - 004e621e49961b733722a1b31420b8a4
+      - a8a7a3e93286e02d45c2ba0826e91a00
       X-Xss-Protection:
       - 1; mode=block
     status:

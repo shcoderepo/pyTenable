@@ -1,101 +1,182 @@
 interactions:
 - request:
-    body: !!python/unicode '{"name": "a8dd4c12-109a-4b0e-b"}'
+    body: '{"name": "5ad9f232-bb17-4c3b-a"}'
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      Content-Length: ['32']
-      Content-Type: [application/json]
-      User-Agent: [pyTenable/0.3.4 (pyTenable/0.3.4; Python/2.7.14)]
-      X-APIKeys: [accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
+        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
+      X-APIKeys:
+      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: POST
-    uri: https://cloud.tenable.com/folders
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/folders
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA6tWykxRsjI0NjIwqwUAtuqGmwwAAAA=
+        H4sIAAAAAAAAA6tWykxRsjI2MbWsBQCWKNY/CwAAAA==
     headers:
-      cache-control: [no-cache]
-      connection: [keep-alive]
-      content-encoding: [gzip]
-      content-type: [application/json; charset=utf-8]
-      date: ['Thu, 06 Dec 2018 23:20:17 GMT']
-      expires: ['0']
-      pragma: ['']
-      server: [tenable.io]
-      set-cookie: [nginx-cloud-site-id=us-2b; path=/; HttpOnly, nginx-cloud-site-id=us-2b;
-          path=/; HttpOnly]
-      strict-transport-security: [max-age=63072000; includeSubDomains]
-      transfer-encoding: [chunked]
-      vary: [accept-encoding]
-      x-content-type-options: [nosniff]
-      x-frame-options: [DENY]
-      x-gateway-site-id: [nginx-router-c-prod-us-east-2]
-      x-request-uuid: [b2dc9a87eb7585a931383877e61cd692]
-      x-xss-protection: [mode=block]
-    status: {code: 200, message: OK}
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 04 Jun 2021 11:39:13 GMT
+      Expect-CT:
+      - enforce, max-age=86400
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - accept-encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Gateway-Site-ID:
+      - nginx-router-tlf6d-us-east-1-eng
+      X-Path-Handler:
+      - tenable-io
+      X-Request-Uuid:
+      - dbe1855e1501ed5e189e75132795e9f1
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
 - request:
-    body: !!python/unicode '{"name": "6ae81239-6a54-405c-a"}'
+    body: '{"name": "8ff495cb-26d6-4ee1-8"}'
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      Content-Length: ['32']
-      Content-Type: [application/json]
-      Cookie: [nginx-cloud-site-id=us-2b]
-      User-Agent: [pyTenable/0.3.4 (pyTenable/0.3.4; Python/2.7.14)]
-      X-APIKeys: [accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json
+      Cookie:
+      - nginx-cloud-site-id=qa-develop
+      User-Agent:
+      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
+        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
+      X-APIKeys:
+      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: PUT
-    uri: https://cloud.tenable.com/folders/13206
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/folders/3459
   response:
-    body: {string: !!python/unicode ''}
+    body:
+      string: ''
     headers:
-      cache-control: [no-cache]
-      connection: [keep-alive]
-      content-length: ['0']
-      date: ['Thu, 06 Dec 2018 23:20:17 GMT']
-      expires: ['0']
-      pragma: ['']
-      server: [tenable.io]
-      set-cookie: [nginx-cloud-site-id=us-2b; path=/; HttpOnly, nginx-cloud-site-id=us-2b;
-          path=/; HttpOnly]
-      strict-transport-security: [max-age=63072000; includeSubDomains]
-      x-content-type-options: [nosniff]
-      x-frame-options: [DENY]
-      x-gateway-site-id: [nginx-router-c-prod-us-east-2]
-      x-request-uuid: [9e7d42ddf7abbde95c0faf70326ad2a1]
-      x-xss-protection: [mode=block]
-    status: {code: 200, message: OK}
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Fri, 04 Jun 2021 11:39:14 GMT
+      Expect-CT:
+      - enforce, max-age=86400
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Gateway-Site-ID:
+      - nginx-router-tlf6d-us-east-1-eng
+      X-Path-Handler:
+      - tenable-io
+      X-Request-Uuid:
+      - 9a831ea682aa821767d86557b4fffc75
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
 - request:
     body: null
     headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      Content-Length: ['0']
-      Cookie: [nginx-cloud-site-id=us-2b]
-      User-Agent: [pyTenable/0.3.4 (pyTenable/0.3.4; Python/2.7.14)]
-      X-APIKeys: [accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY]
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Cookie:
+      - nginx-cloud-site-id=qa-develop
+      User-Agent:
+      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
+        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
+      X-APIKeys:
+      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: DELETE
-    uri: https://cloud.tenable.com/folders/13206
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/folders/3459
   response:
-    body: {string: !!python/unicode ''}
+    body:
+      string: ''
     headers:
-      cache-control: [no-cache]
-      connection: [keep-alive]
-      content-length: ['0']
-      date: ['Thu, 06 Dec 2018 23:20:17 GMT']
-      expires: ['0']
-      pragma: ['']
-      server: [tenable.io]
-      set-cookie: [nginx-cloud-site-id=us-2b; path=/; HttpOnly, nginx-cloud-site-id=us-2b;
-          path=/; HttpOnly]
-      strict-transport-security: [max-age=63072000; includeSubDomains]
-      x-content-type-options: [nosniff]
-      x-frame-options: [DENY]
-      x-gateway-site-id: [nginx-router-c-prod-us-east-2]
-      x-request-uuid: [b4825e4dee5b158306dcc6cd53982e44]
-      x-xss-protection: [mode=block]
-    status: {code: 200, message: OK}
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Fri, 04 Jun 2021 11:39:15 GMT
+      Expect-CT:
+      - enforce, max-age=86400
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Gateway-Site-ID:
+      - nginx-router-tlf6d-us-east-1-eng
+      X-Path-Handler:
+      - tenable-io
+      X-Request-Uuid:
+      - 8e85b29be1ca4acd13f227822249ede8
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
 version: 1

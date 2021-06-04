@@ -1,0 +1,90 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
+        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
+      X-APIKeys:
+      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
+    method: GET
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/scanners/2/agents/exclusions
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA9Wa244bxxGGX0Xg9TbUVV194p0h74WRxAkQCUESBIs+KoSopcODZUfQu7t6uByO
+        ZM5QIlfa5IIAd6o4HH5d89dfPft+Vn5Jy91msbrfzOb/fD/LZZPWi5+2fGA2n81uZvfhbeF3m7L+
+        efFzEeF1ud+KuAzpzWq3Fe8W93n1jtN2u0XmtKgU2ay8KEpaQaiS8ElmEV1ITldvlLKcndYltK+4
+        y2HLZwftURtF3tzMlmGzvXu7you6SGM57atASvCST7Val7vdTy1pcxeXq/SmcHS73pWb2Sb9u+Td
+        kj/9frbZhvV2u+h+DEqUQhoB/hmYuZJzKfmiyn0+EbccPMRDXB5Pvl7zmTft1HVd/sOf+vOPty9/
+        +NMtZy7ut4wrLPkgzD7czNpp/7u6b6f+x265m334cPMpab76LXy/6A/tf9GRfxdv7/vAA3GFHgwm
+        J5LNRlAxSUQVpSApfQKPKWV1krgCo8D6SeIth6TtiSOY64ijeQZ6QPRT4vu4ekzi320W4fmLsEy7
+        7TacQn+E3Jd1oy3yYtO+HpU60i6JK7hEFFUicX0HLRxSFcnXqpQPYKIeoe28cdP13eccaKO6mjbi
+        RH23uHrc+v4C2h3kA/K9kAiJR9YUpcakozAWsiADzFpGEjrpqnVyyeR4mjUZQpLTrDlHkz6yJryO
+        tZLPpJpg3eJPV9mdfKdevnevf6fcVRmQUZIA61hHtKnCVwmiuuDJRx+1pVHl1mTPKneX0ys3/N8p
+        96u/Pv9LSO3HiR/Lu1O420UDqgH1/a8I6/3RB9Ka/9KKNcQ52+raOBEkSGEopSoDhABuREOwvc5o
+        CPJy4UCx9dUa8lHdntAQab6xhgzl+YQXGerLeNbDajhtMRF5LpkaBUHywhupRA46p6wxeD+2GqCV
+        OaMyh5zDakh3/WrgdP+U+GQq85GiCwlHygYddzMtRcHmC6Uh4YLJAlDmggAQch7Rcn75M5Q1KAsD
+        ynSlurBWT6pLi7tvTHnVveHPHtVl9bbcde+P9ttoKAGTwGoTSwvrt/NOClUrF3m2MdRTLdMgotTO
+        wATmQc4eMzi43J6AkFqgaxiB5uA/xXyIsz05xqcxf//dD3/8+zTk2216/urli4vxWkneAxs/mbMW
+        lAKJUEmJmnO12WqgdKqK9+i8mlLuQU6Plx4FbxPvKbx9/GviPWLNymXMZIQnjYKCZFNSTRFKaZtA
+        ZePID4hXJ9mVsBcpkYmr6IUrqQobIzmfg4q2jhG3Vk/pxiCnJ365OvfEO6Lkxoi3au7jj6Abn8Xc
+        Yi0aGCAPgywLqCtPLdzouFzR8tjC3mzA3JTkY5bsu31VLCKR14qtIBtDDzlWANSjImKtnZpxBjk9
+        c/8ozA1jnWLex78u8xcdlPvXz162eR26dT4U/vKXzd3h8B0Y7oGebZ+SajDzKMrKkPUihMDrYwML
+        OIARuhRucQV4GU+5kYeTWTfF/pjzwJ5b5RV9EkCg/Xhazyfij+wNr5HvJL0ntgqi1AI84lRkq5fZ
+        NEkP7McVyjgqJsrg1FbJIOdQ2PIRCputHk8xdrSw1SD+ALeG5eaJ2mMJQRfjuT0qw8VLRbG0Awpj
+        gkUe3XVGM8bXgDvbHvc5vXBcPtgM26Of02R77OPfpj2e3IIa9MOcUnDUlLwW1mbNSiFjFCFjlVai
+        xyRHphUucpjUZpCWpcnQYFqx108r8vS0wog7feDg5/rov93e/uH3jG9m8dd3pbzJ4Vf+++Wr6321
+        D2zqMldArs1zJF9F8LEKFVyKtVAp3R13KPqqqjVSCs2fE+SDE3zr8z3gozXcd4vTp3YEu4L2Rk0q
+        9jHnUPRX7Aj2Re/nYEe7pW8rcox/zaLvnzzcDY9PCUzNhhLkLDBZYu8IWUTr2Dt6CtljzlRPPV1o
+        HMFw9zvDmnO0PrJW1wsMQhtf5Ph4I+fUx7+YNcpLm6OnGEpNfA2xjePEg7nzoe20EqScCzgalLgt
+        bAJjaNabuG/Wmnl4V5Hvj6S1w5qjDqexE7K/O1Pih5wD9is2YjusCtoWCPq5Pl3iLW4H8SefKiNk
+        n3KTGpl4IvIsnC5kENZChqwqgR2raqmpVemZqbLL6dvm5Z5v0DaZIKiJtnmMPzleq5KsRQVREZyg
+        TK2OWTm4pD2XXkA0OIpX67PjzD6nx3v51tMQL2s0TeHt40+ON7Jw6KhJBMVjOoVCjDcq7paVkrIR
+        Yj3lSPborDs7oe9zerxXisOD6cO5Hp3Qm+nr40+ON0WoPJwUYSmyp9ZZisD3M8tE9a46q6Qro54a
+        zw/j+5we7+WPdwd4u643gfcYf3K8WlfSrnJX6+Zt9Iw3gheZ2GlLo408PW936NTkM8ZBTo/3cj89
+        xIvTG6bH+LfF65NjYW1bzimr/XMt7mvtHxOSlzFldtIw7HrRJnCRhwDfWp/E5uVQQEiVpLdYaVQ3
+        rDdTzxsHOb1vfhRZJj/HqcI+xv+3fLN3DLvkJKq2XOWekggu81ijeU08k05lbEcPdPc0Zdo3c86Q
+        9fUiwr5YszXGCd+MffyCXaXPdc5fjjpmZmk0T+Se2MwBl7XLjtthUcj3BQY9unkKmvBcWXOOUgPU
+        129YN9RqYsO6oVZXbFiPoP7Xh98AGfNM1HsmAAA=
+    headers:
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 04 Jun 2021 10:15:27 GMT
+      Set-Cookie:
+      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - accept-encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Gateway-Site-ID:
+      - nginx-router-tlf6d-us-east-1-eng
+      X-Path-Handler:
+      - tenable-io
+      X-Request-Uuid:
+      - f84d4206f52566a4b82b3cb505cffc7b
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

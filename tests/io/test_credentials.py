@@ -148,8 +148,24 @@ def test_credentials_edit_id_unexpectedvalueerror(api):
 
 @pytest.mark.vcr()
 def test_credentials_edit_success(api, cred):
-    c = api.credentials.edit(cred, cred_name='updated cred')
+    c = api.credentials.edit(cred,
+                             cred_name='credential_name',
+                             description='description',
+                             ad_hoc=False,
+                             permissions=[('user', 32, cred)],
+                             settings={}
+                             )
     assert isinstance(c, bool)
+
+@pytest.mark.vcr()
+def test_credentials_list(api, scanner):
+    count = 0
+    credentials = api.credentials.list(filter_type='or',
+                                       limit=45,
+                                       offset=2,
+                                       wildcard='match',
+                                       wildcard_fields=['name'],
+                                       owner_uuid=scanner['uuid'])
 
 def test_credentials_details_id_typeerror(api):
     with pytest.raises(TypeError):
@@ -268,3 +284,75 @@ def test_credentials_list(api):
 @pytest.mark.vcr()
 def test_credentials_upload(api):
     api.credentials.upload('ExampleDataGoesHere')
+
+
+@pytest.mark.vcr()
+def test_credentials_types_success(api):
+    resp = api.credentials.types()
+    assert isinstance(resp, list)
+    for i in resp:
+        check(i, 'id', str)
+        check(i, 'category', str, allow_none=True)
+        check(i, 'default_expand', bool, allow_none=True)
+        check(i, 'types', list, allow_none=True)
+        for j in i.get('types'):
+            check(j, 'id', str, allow_none=True)
+            check(j, 'name', str, allow_none=True)
+            check(j, 'max', int, allow_none=True)
+            check(j, 'configuration', list, allow_none=True)
+            for k in j.get('configuration'):
+                check(k, 'type', str)
+                check(k, 'name', str)
+                if 'hint' in k.keys():
+                    check(k, 'hint', str, allow_none=True)
+                check(k, 'id', str)
+
+@pytest.mark.vcr()
+def test_credentials_edit_success(api, cred):
+    c = api.credentials.edit(cred,
+                             cred_name='updated cred',
+                             description='description',
+                             ad_hoc=False,
+                             permissions=[('user', 32, cred)],
+                             settings={}
+                             )
+    assert isinstance(c, bool)
+
+@pytest.mark.vcr()
+def test_credentials_list(api, scanner):
+    count = 0
+    credentials = api.credentials.list(filter_type='or',
+                                       limit=45,
+                                       offset=2,
+                                       wildcard='match',
+                                       wildcard_fields=['name'],
+                                       owner_uuid=scanner['uuid'])
+    pass
+    for c in credentials:
+        count += 1
+        assert isinstance(c, dict)
+        check(c, 'uuid', str)
+        check(c, 'name', str)
+        check(c, 'description', str)
+        check(c, 'category', dict)
+        check(c['category'], 'id', str)
+        check(c['category'], 'name', str)
+        check(c, 'type', dict)
+        check(c['type'], 'id', str)
+        check(c['type'], 'name', str)
+        check(c, 'created_date', int)
+        check(c, 'created_by', dict)
+        check(c['created_by'], 'id', int)
+        check(c['created_by'], 'display_name', str)
+        check(c, 'last_used_by', dict)
+        check(c['last_used_by'], 'id', int, allow_none=True)
+        check(c['last_used_by'], 'display_name', str, allow_none=True)
+        check(c, 'permission', int)
+        check(c, 'user_permissions', int)
+    assert count == credentials.total
+
+@pytest.mark.vcr()
+def test_credentials_permissions_constructor_typeerror(api):
+    with pytest.raises(TypeError):
+        api.credentials._permissions_constructor('string')
+

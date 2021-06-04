@@ -8,21 +8,19 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Content-Length:
-      - '0'
-      Cookie:
-      - nginx-cloud-site-id=qa-develop
       User-Agent:
       - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
         (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
-    method: DELETE
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/credentials/4b9146a1-ef8e-489f-8b6e-513c34da7ec2
+    method: GET
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/access-groups/rules/filters
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA6tWSknNSS1JTVGyKikqTa0FAIR7ZyoQAAAA
+        H4sIAAAAAAAAAzXLsQrDMAyE4VcRmkPI0iVbCR26FfoEIj6CIZapZLeE0HevScl2/Hy3sxcp1acc
+        wONlGDqGWTYe+a4FprLSE/aG0e3oHSe4y9I0X5XiifyPjjPlea5mCD09VoiDPhILCaWcoG1ooGIb
+        bbkaGV4V3uIiUXv+/gBAEMQfkgAAAA==
     headers:
       Cache-Control:
       - no-store
@@ -31,9 +29,9 @@ interactions:
       Content-Encoding:
       - gzip
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json; charset=utf-8
       Date:
-      - Fri, 04 Jun 2021 12:58:14 GMT
+      - Fri, 04 Jun 2021 11:37:17 GMT
       Expect-CT:
       - enforce, max-age=86400
       Pragma:
@@ -48,17 +46,15 @@ interactions:
       - accept-encoding
       X-Content-Type-Options:
       - nosniff
-      X-Frame-Options:
-      - DENY
       X-Gateway-Site-ID:
-      - nginx-router-tlf6d-us-east-1-eng
+      - nginx-router-frc6f-us-east-1-eng
       X-Path-Handler:
       - tenable-io
       X-Request-Uuid:
-      - 8af36313c5300682caf19a6aaaed2ff7
-      X-Xss-Protection:
+      - 3b32452ead5204a739e3dda9190c45a5
+      X-XSS-Protection:
       - 1; mode=block
     status:
-      code: 200
-      message: OK
+      code: 500
+      message: Internal Server Error
 version: 1
