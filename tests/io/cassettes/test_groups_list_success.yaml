@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"name": "7c9242ef-6501-4b0a-b095-494ffa206a54"}'
+    body: '{"name": "95aa8b08-98d0-43a4-a2f6-e14cfeb6252f"}'
     headers:
       Accept:
       - '*/*'
@@ -18,13 +18,13 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: POST
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/groups
+    uri: https://cloud.tenable.com/groups
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAy3NQQrCQAxA0btk3UCSZtKMl5FJZwJdWEHsSry7Lbh//P+B49g63KDXDDETZO+M
-        SjXRRQTH4Nad0pUcJtjbY5x6WauojEQrdOqghkG1oFbNbELWip76KjPxLJUmWJ/7u237eN3/y1hM
-        3Dgw2qyozAs6jcCSSW6FrZeA7w8VKri3ogAAAA==
+        H4sIAAAAAAAAAy3NMQrDMAxA0bt4jsBSZFvuZYpkS5ChKZRmKr17E+j++P+TjmOb6Za4YG5RDDBc
+        gc0HyGwNiKTbwNaJRlrSrg8/dS+qYlmgy8zAqzIoRQVHHuFWqVCc+ipjxpU6LWk897duu7/u/6W1
+        SlLRwHRlYMQGkt2gRGSpBesslr4/OXhfP6IAAAA=
     headers:
       Cache-Control:
       - no-store
@@ -35,7 +35,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 04 Jun 2021 12:21:46 GMT
+      - Fri, 04 Jun 2021 15:02:29 GMT
       Expect-CT:
       - enforce, max-age=86400
       Pragma:
@@ -51,11 +51,11 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Gateway-Site-ID:
-      - nginx-router-tlf6d-us-east-1-eng
+      - nginx-router-0evnh-us-east-1-eng
       X-Path-Handler:
       - tenable-io
       X-Request-Uuid:
-      - 715cfa39939dee07f58856874a449325
+      - 1c403c18bc2ac9d3474e2c51ac54d6e1
       X-XSS-Protection:
       - 1; mode=block
     status:
@@ -82,41 +82,41 @@ interactions:
   response:
     body:
       string: !!binary |
-        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
+        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
     headers:
       Cache-Control:
       - no-store
@@ -127,7 +127,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 04 Jun 2021 12:21:48 GMT
+      - Fri, 04 Jun 2021 15:02:30 GMT
       Expect-CT:
       - enforce, max-age=86400
       Pragma:
@@ -143,11 +143,11 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Gateway-Site-ID:
-      - nginx-router-tlf6d-us-east-1-eng
+      - nginx-router-0evnh-us-east-1-eng
       X-Path-Handler:
       - tenable-io
       X-Request-Uuid:
-      - daffd8d4a1ac4e716a66092a49a85142
+      - ecb9eed1fb9aec2e9f00d23818566915
       X-XSS-Protection:
       - 1; mode=block
     status:
@@ -172,7 +172,7 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: DELETE
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/groups/1013290
+    uri: https://qa-develop.cloud.aws.tenablesecurity.com/groups/1013292
   response:
     body:
       string: ''
@@ -184,7 +184,7 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Fri, 04 Jun 2021 12:21:49 GMT
+      - Fri, 04 Jun 2021 15:02:31 GMT
       Expect-CT:
       - enforce, max-age=86400
       Pragma:
@@ -196,11 +196,11 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Gateway-Site-ID:
-      - nginx-router-tlf6d-us-east-1-eng
+      - nginx-router-0evnh-us-east-1-eng
       X-Path-Handler:
       - tenable-io
       X-Request-Uuid:
-      - 6101dfba8d98895fa616154315feba53
+      - ef4a558e96fcdb20033b1b92d0090fd6
       X-XSS-Protection:
       - 1; mode=block
     status:

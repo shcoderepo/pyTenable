@@ -14,7 +14,7 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: GET
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/access-groups/rules/filters
+    uri: https://cloud.tenable.com/access-groups/rules/filters
   response:
     body:
       string: !!binary |

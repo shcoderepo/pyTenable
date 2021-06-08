@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"name": "5ad9f232-bb17-4c3b-a"}'
+    body: '{"name": "feb1893d-45c8-4033-a"}'
     headers:
       Accept:
       - '*/*'
@@ -18,11 +18,11 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: POST
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/folders
+    uri: https://cloud.tenable.com/folders
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA6tWykxRsjI2MbWsBQCWKNY/CwAAAA==
+        H4sIAAAAAAAAA6tWykxRsjI0Ma0FAP92/LcKAAAA
     headers:
       Cache-Control:
       - no-store
@@ -33,7 +33,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 04 Jun 2021 11:39:13 GMT
+      - Tue, 08 Jun 2021 09:33:34 GMT
       Expect-CT:
       - enforce, max-age=86400
       Expires:
@@ -41,7 +41,8 @@ interactions:
       Pragma:
       - no-cache
       Set-Cookie:
-      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Transfer-Encoding:
@@ -53,18 +54,16 @@ interactions:
       X-Frame-Options:
       - DENY
       X-Gateway-Site-ID:
-      - nginx-router-tlf6d-us-east-1-eng
-      X-Path-Handler:
-      - tenable-io
+      - nginx-router-j15ji-ap-southeast-1-prod
       X-Request-Uuid:
-      - dbe1855e1501ed5e189e75132795e9f1
+      - a7e9476be2c15b149d329631285f9751
       X-Xss-Protection:
       - 1; mode=block
     status:
       code: 200
       message: OK
 - request:
-    body: '{"name": "8ff495cb-26d6-4ee1-8"}'
+    body: '{"name": "d3e0b0f3-1f95-4401-8"}'
     headers:
       Accept:
       - '*/*'
@@ -77,14 +76,14 @@ interactions:
       Content-Type:
       - application/json
       Cookie:
-      - nginx-cloud-site-id=qa-develop
+      - nginx-cloud-site-id=us-2b
       User-Agent:
       - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
         (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: PUT
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/folders/3459
+    uri: https://cloud.tenable.com/folders/145
   response:
     body:
       string: ''
@@ -96,7 +95,7 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Fri, 04 Jun 2021 11:39:14 GMT
+      - Tue, 08 Jun 2021 09:33:36 GMT
       Expect-CT:
       - enforce, max-age=86400
       Expires:
@@ -104,7 +103,8 @@ interactions:
       Pragma:
       - no-cache
       Set-Cookie:
-      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -112,11 +112,9 @@ interactions:
       X-Frame-Options:
       - DENY
       X-Gateway-Site-ID:
-      - nginx-router-tlf6d-us-east-1-eng
-      X-Path-Handler:
-      - tenable-io
+      - nginx-router-j15ji-ap-southeast-1-prod
       X-Request-Uuid:
-      - 9a831ea682aa821767d86557b4fffc75
+      - dce7392e61d236761a168d328ce2d1a0
       X-Xss-Protection:
       - 1; mode=block
     status:
@@ -134,14 +132,14 @@ interactions:
       Content-Length:
       - '0'
       Cookie:
-      - nginx-cloud-site-id=qa-develop
+      - nginx-cloud-site-id=us-2b
       User-Agent:
       - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
         (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: DELETE
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/folders/3459
+    uri: https://cloud.tenable.com/folders/145
   response:
     body:
       string: ''
@@ -153,7 +151,7 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Fri, 04 Jun 2021 11:39:15 GMT
+      - Tue, 08 Jun 2021 09:33:37 GMT
       Expect-CT:
       - enforce, max-age=86400
       Expires:
@@ -161,7 +159,8 @@ interactions:
       Pragma:
       - no-cache
       Set-Cookie:
-      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       X-Content-Type-Options:
@@ -169,11 +168,9 @@ interactions:
       X-Frame-Options:
       - DENY
       X-Gateway-Site-ID:
-      - nginx-router-tlf6d-us-east-1-eng
-      X-Path-Handler:
-      - tenable-io
+      - nginx-router-j15ji-ap-southeast-1-prod
       X-Request-Uuid:
-      - 8e85b29be1ca4acd13f227822249ede8
+      - 0a84f427eb4864dd6828b1c78cf62a36
       X-Xss-Protection:
       - 1; mode=block
     status:

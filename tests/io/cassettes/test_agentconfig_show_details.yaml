@@ -14,20 +14,13 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: GET
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/scanners/1/agents/config
+    uri: https://cloud.tenable.com/scanners/1/agents/config
   response:
     body:
       string: !!binary |
         H4sIAAAAAAAAAwXBQQrAIAwEwL/s2UOht3xGIkaQShRNaEH8e2c22K1H11b1AW2IcmqSQYXbkgD5
         Rp1stSvovk7A6sVenhJ9ZDYB2XQ5P+9utAdIAAAA
     headers:
-      Access-Control-Allow-Headers:
-      - Accept, Content-Type, Authorization, X-Request-UUID, X-Client-ID, X-Session-UUID,
-        X-Container-UUID, X-User-UUID
-      Access-Control-Allow-Methods:
-      - GET, POST, DELETE, PUT
-      Access-Control-Allow-Origin:
-      - '*'
       Cache-Control:
       - no-cache
       Connection:
@@ -37,9 +30,10 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 04 Jun 2021 11:21:14 GMT
+      - Tue, 08 Jun 2021 08:40:58 GMT
       Set-Cookie:
-      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Transfer-Encoding:
@@ -49,11 +43,9 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Gateway-Site-ID:
-      - nginx-router-tlf6d-us-east-1-eng
-      X-Path-Handler:
-      - tenable-io
+      - nginx-router-gcte4-ap-southeast-1-prod
       X-Request-Uuid:
-      - 219931a66fe8fce203ff27640227a786
+      - 207a40beb1de8d525843a66079f1a138
       X-XSS-Protection:
       - 1; mode=block
     status:

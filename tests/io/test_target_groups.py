@@ -3,7 +3,6 @@ from tenable.errors import *
 import uuid, pytest
 
 @pytest.fixture
-@pytest.mark.vcr()
 def targetgroup(request, api):
     group = api.target_groups.create(str(uuid.uuid4()), ['192.168.0.1'])
     def teardown():
@@ -110,7 +109,7 @@ def test_targetgroups_edit_acls_typeerror(api):
 def test_targetgroups_edit(api, targetgroup):
     members = targetgroup['members'].split(',')
     members.append('192.168.0.2')
-    mod = api.target_groups.edit(targetgroup['id'], members=members)
+    mod = api.target_groups.edit(targetgroup['id'], members=members, name='targetgroup_name')
     assert isinstance(mod, dict)
     t = mod
     check(t, 'acls', list)

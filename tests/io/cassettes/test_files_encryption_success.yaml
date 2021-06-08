@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: "--1aac8e2d7b821fded786b1f1d4dfd18d\r\nContent-Disposition: form-data; name=\"no_enc\"\r\n\r\n1\r\n--1aac8e2d7b821fded786b1f1d4dfd18d\r\nContent-Disposition:
-      form-data; name=\"Filedata\"; filename=\"testfile.txt\"\r\n\r\ntest\r\n--1aac8e2d7b821fded786b1f1d4dfd18d--\r\n"
+    body: "--5dd50ec8c631b6d42af9aadb4954d7a4\r\nContent-Disposition: form-data; name=\"no_enc\"\r\n\r\n1\r\n--5dd50ec8c631b6d42af9aadb4954d7a4\r\nContent-Disposition:
+      form-data; name=\"Filedata\"; filename=\"testfile.txt\"\r\n\r\ntest\r\n--5dd50ec8c631b6d42af9aadb4954d7a4--\r\n"
     headers:
       Accept:
       - '*/*'
@@ -12,18 +12,18 @@ interactions:
       Content-Length:
       - '244'
       Content-Type:
-      - multipart/form-data; boundary=1aac8e2d7b821fded786b1f1d4dfd18d
+      - multipart/form-data; boundary=5dd50ec8c631b6d42af9aadb4954d7a4
       User-Agent:
       - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
         (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: POST
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/file/upload
+    uri: https://cloud.tenable.com/file/upload
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA6tWSsvMSS0tyMlPTElNUbJSKkktLgEJ6ZVUlCjVAgCT1IAtHwAAAA==
+        H4sIAAAAAAAAA6tWSsvMSS0tyMlPTElNUbJSKkktLgEJ6ZVUlMQbKtUCAC+32PMhAAAA
     headers:
       Cache-Control:
       - no-store
@@ -34,7 +34,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 04 Jun 2021 10:33:40 GMT
+      - Tue, 08 Jun 2021 09:32:22 GMT
       Expect-CT:
       - enforce, max-age=86400
       Expires:
@@ -42,7 +42,8 @@ interactions:
       Pragma:
       - no-cache
       Set-Cookie:
-      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Transfer-Encoding:
@@ -54,11 +55,9 @@ interactions:
       X-Frame-Options:
       - DENY
       X-Gateway-Site-ID:
-      - nginx-router-0evnh-us-east-1-eng
-      X-Path-Handler:
-      - tenable-io
+      - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - f0fb76b1e7380dbea8c8d48621a20bf6
+      - 06a395b2431e5505a3c173e77dd451e8
       X-Xss-Protection:
       - 1; mode=block
     status:

@@ -8,25 +8,24 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
+      Cookie:
+      - nginx-cloud-site-id=us-2b
       User-Agent:
       - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
         (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: GET
-    uri: https://cloud.tenable.com/scanners/2/agents/exclusions
+    uri: https://cloud.tenable.com/networks/58ac2d96-81aa-472c-a418-74fcc6082049/counts/assets-not-seen-in/5
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA22PT0/DMAzFvwrKuRFJmrRpr6gnOG6aEEJV/rgiWteOJAXG1O+OuwscuNl+P79n
-        Xwl8uXFJYZ4SaV+uxENyMZwzDkhLSEEmcwKsBl0aVWpPvQRJJThNDeeSgjSll7qu5cCQXpbgkbZW
-        WaEqQYVnNZW1c7TxStNysEPTcCZVbZF2EcyW1HuTMYRXXDVVo3RZkNGk3J9mH4bg/mVUQbYoztSN
-        d3OEfjlvUOrtOLsjoJrjAgVJ7g38MuL2laRsYs7h9pNgglNWUl7fMd2KqhUCj4LJ/6M3f3Rjx1/z
-        GNE5bdZDhHfcOnTd49MzgmHKED/MiDOOrb18Ahy9uWC/2xeHjqwF2ZK+52lL67K73+8eyLq+rj9x
-        mn+7lwEAAA==
+        H4sIAAAAAAAAA6tWyivNdSwuTi0pDskvScxRsjLSQQj55ZcEp6bmAQVrAaLs1JEpAAAA
     headers:
+      Accept-Ranges:
+      - bytes
       Cache-Control:
-      - no-cache
+      - no-store
       Connection:
       - keep-alive
       Content-Encoding:
@@ -34,7 +33,11 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 08:48:24 GMT
+      - Mon, 07 Jun 2021 11:32:51 GMT
+      Expect-CT:
+      - enforce, max-age=86400
+      Pragma:
+      - no-cache
       Set-Cookie:
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
@@ -49,9 +52,9 @@ interactions:
       X-Frame-Options:
       - DENY
       X-Gateway-Site-ID:
-      - nginx-router-c3gdt-ap-southeast-1-prod
+      - nginx-router-j15ji-ap-southeast-1-prod
       X-Request-Uuid:
-      - ab46017ec0bb9bf377c6527906114fc0
+      - 69b6d26e787d7a579f08574dd7065b44
       X-Xss-Protection:
       - 1; mode=block
     status:
