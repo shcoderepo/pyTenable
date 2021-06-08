@@ -94,6 +94,7 @@ class AnalysisResultsIterator(SCResultsIterator):
         # we run into that limit.  If we have, then return a StopIteration
         # exception.
         if self._pages_total and self._pages_requested >= self._pages_total:
+            self._log.exception('StopIteration')
             raise StopIteration()
 
         # Now we need to do is construct the query with the current offset
@@ -488,6 +489,8 @@ class AnalysisAPI(SCEndpoint):
                 if 'silo_id' in kw:
                     payload['view'] = self._check('silo_id', kw['silo_id'], str)
                 else:
+                    self._log.exception(UnexpectedValueError(
+                        'silo_id is required for archive source'))
                     raise UnexpectedValueError(
                         'silo_id is required for archive source')
 

@@ -17,7 +17,7 @@ interface to use for your own uses, take a look at the RESTfly library.
     :members:
 '''
 from __future__ import absolute_import
-import requests, sys, platform, logging, re, time, logging, warnings, json
+import requests, sys, platform, logging, re, time, warnings, json, os
 from requests.exceptions import (
     ConnectionError as RequestsConnectionError,
     RequestException as RequestsRequestException
@@ -25,6 +25,33 @@ from requests.exceptions import (
 from tenable.errors import *
 from tenable.utils import url_validator
 from tenable import __version__, __author__
+
+def set_log_handler(logging):
+    '''
+    To set file handler for logging
+
+    Args:
+        logging (object): logging object
+
+    Returns:
+        file handler object for logging
+    '''
+    # Create the Handler for logging data to a file
+    logger_handler = logging.FileHandler(
+        filename=os.path.join(
+            os.path.dirname(os.path.realpath(__file__)),
+            '..', '..', 'pytenable.log'))
+
+    logger_handler.setLevel(logging.DEBUG)
+
+    # Create a Formatter for formatting the log messages
+    logger_formatter = logging.Formatter(
+        '[%(asctime)s.%(msecs)03d] %(levelname)-8s %(name)-25s: %(message)s', '%d/%b/%Y:%H:%M:%S')
+
+    # Add the Formatter to the Handler
+    logger_handler.setFormatter(logger_formatter)
+
+    return logger_handler
 
 
 class APIResultsIterator(object):
@@ -72,8 +99,7 @@ class APIResultsIterator(object):
 
     def __init__(self, api, **kw):
         self._api = api
-        self._log = logging.getLogger('{}.{}'.format(
-            self.__module__, self.__class__.__name__))
+        self._log = logging.getLogger()
         self.__dict__.update(kw)
 
     def _get_page(self):
@@ -92,6 +118,7 @@ class APIResultsIterator(object):
         # If there are no more agent records to return, then we should raise
         # a StopIteration exception to end the madness.
         if self.count >= self.total:
+            self._log.exception('StopIteration')
             raise StopIteration()
 
         # If we have worked through the current page of records and we still
@@ -100,6 +127,7 @@ class APIResultsIterator(object):
         if self.page_count >= len(self.page) and self.count <= self.total:
             self._get_page()
             if len(self.page) == 0:
+                self._log.exception('StopIteration')
                 raise StopIteration()
 
         # Get the relevant record, increment the counters, and return the
@@ -134,6 +162,7 @@ class APIEndpoint(object):
                     'and may change'
             ]))
         self._api = api
+        self._log = logging.getLogger()
 
     def _check(self, name, obj, expected_type,
                choices=None, default=None, case=None, pattern=None):
@@ -265,6 +294,11 @@ class APIEndpoint(object):
         # If the object is none of the right types then we want to raise a
         # TypeError as it was something we weren't expecting.
         if not type_pass:
+            self._log.exception(TypeError('{} is of type {}.  Expected {}.'.format(
+                name,
+                obj.__class__.__name__,
+                expected_type.__name__ if hasattr(expected_type, '__name__') else expected_type
+            )))
             raise TypeError('{} is of type {}.  Expected {}.'.format(
                 name,
                 obj.__class__.__name__,
@@ -278,11 +312,19 @@ class APIEndpoint(object):
         if isinstance(obj, list):
             for item in obj:
                 if isinstance(choices, list) and item not in choices:
+                    self._log.exception(UnexpectedValueError(
+                        '{} has value of {}.  Expected one of {}'.format(
+                            name, obj, ','.join([str(i) for i in choices])
+                    )))
                     raise UnexpectedValueError(
                         '{} has value of {}.  Expected one of {}'.format(
                             name, obj, ','.join([str(i) for i in choices])
                     ))
         elif isinstance(choices, list) and obj not in choices:
+            self._log.exception(UnexpectedValueError(
+                '{} has value of {}.  Expected one of {}'.format(
+                    name, obj, ','.join([str(i) for i in choices])
+            )))
             raise UnexpectedValueError(
                 '{} has value of {}.  Expected one of {}'.format(
                     name, obj, ','.join([str(i) for i in choices])
@@ -290,6 +332,10 @@ class APIEndpoint(object):
 
         if pattern and isinstance(obj, str):
             if len(re.findall(pattern, str(obj))) <= 0:
+                self._log.exception(UnexpectedValueError(
+                    '{} has value of {}.  Does not match pattern {}'.format(
+                        name, obj, pattern)
+                ))
                 raise UnexpectedValueError(
                     '{} has value of {}.  Does not match pattern {}'.format(
                         name, obj, pattern)
@@ -386,8 +432,8 @@ class APISession(object):
             self._build = build
         if timeout and isinstance(timeout, (int, tuple)):
             self._timeout = timeout
-        self._log = logging.getLogger('{}.{}'.format(
-            self.__module__, self.__class__.__name__))
+        self._log = logging.getLogger()
+        self._log.addHandler(set_log_handler(logging))
 
         # Setting the SSL Verification flag on the object itself so that it's
         # reusable if the user logs out and logs back in.
@@ -542,6 +588,7 @@ class APISession(object):
                 elif status in self._error_codes.keys():
                     # If a status code that we know about has returned, then we
                     # will want to raise the appropriate Error.
+                    self._log.exception(self._error_codes[status](resp))
                     raise self._error_codes[status](resp)
 
                 elif status >= 200 and status <= 299:
@@ -552,7 +599,9 @@ class APISession(object):
                 else:
                     # If all else fails, raise an error stating that we don't
                     # even know whats happening.
+                    self._log.exception(UnknownError(resp))
                     raise UnknownError(resp)
+        self._log.exception(RetryError(resp, retries))
         raise RetryError(resp, retries)
 
     def get(self, path, **kwargs):

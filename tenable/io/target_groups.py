@@ -53,6 +53,7 @@ class TargetGroupsAPI(TIOEndpoint):
         if len(members) > 0:
             payload['members'] = ','.join(self._check('members', members, list))
         else:
+            self._log.exception(UnexpectedValueError('No members in members list'))
             raise UnexpectedValueError('No members in members list')
 
         return self._api.post('target-groups', json=payload).json()

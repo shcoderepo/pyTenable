@@ -40,6 +40,8 @@ class UploadAPI(CSEndpoint):
         try:
             import docker
         except ImportError:
+            self._log.exception(PackageMissingError(
+                'The python package docker is required to use cs.uploads.docker_push'))
             raise PackageMissingError(
                 'The python package docker is required to use cs.uploads.docker_push')
         d = docker.from_env(version='auto')

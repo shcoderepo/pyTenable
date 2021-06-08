@@ -94,9 +94,12 @@ class AssetListAPI(SCEndpoint):
                         resp['pluginIDConstraint'] = ','.join(
                             [str(r) for r in rule[3]])
                     else:
+                        self._log.exception(TypeError(
+                            'rule {} has an invalid plugin constraint.'.format(rule)))
                         raise TypeError(
                             'rule {} has an invalid plugin constraint.'.format(rule))
         else:
+            self._log.exception(TypeError('rules {} not a tuple or dict'.format(rule)))
             raise TypeError('rules {} not a tuple or dict'.format(rule))
         return resp
 
@@ -203,6 +206,8 @@ class AssetListAPI(SCEndpoint):
         elif (('dn' in kw and ('search_string' not in kw or 'ldap_id' not in kw))
           or ('search_string' in kw and ('dn' not in kw or 'ldap_id' not in kw))
           or ('ldap_id' in kw and ('search_string' not in kw or 'dn' not in kw))):
+            self._log.exception(UnexpectedValueError(
+                'dn, search_string, and ldap_id must all be present'))
             raise UnexpectedValueError(
                 'dn, search_string, and ldap_id must all be present')
 

@@ -23,8 +23,7 @@ class TenableException(Exception):
     seen.
     '''
     def __init__(self, msg):
-        self._log = logging.getLogger('{}.{}'.format(
-            self.__module__, self.__class__.__name__))
+        self._log = logging.getLogger()
         self.msg = str(msg)
         self._log.error(self.msg)
 

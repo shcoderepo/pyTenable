@@ -93,6 +93,7 @@ class APIPlatform(Base):
         # if the constructed URL isn't valid, then we will throw a TypeError
         # to inform the caller that something isn't right here.
         if not url_validator(self._url):
+            self._log.exception(TypeError('{url} is not a valid URL'.format(url=self._url)))
             raise TypeError('{url} is not a valid URL'.format(url=self._url))
 
         # CamelCase squashing is an optional parameter thanks to Box.  if the

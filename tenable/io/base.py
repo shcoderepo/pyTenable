@@ -40,6 +40,8 @@ class TIOEndpoint(APIEndpoint):
             # the operators and values to make sure that the input is expected.
             fname = self._check('filter_name', f[0], str)
             if f[0] not in filterset:
+                self._log(UnexpectedValueError(
+                    '{} is not a filterable option'.format(f[0])))
                 raise UnexpectedValueError(
                     '{} is not a filterable option'.format(f[0]))
 
@@ -51,6 +53,7 @@ class TIOEndpoint(APIEndpoint):
             elif isinstance(f[2], list):
                 rval = f[2]
             else:
+                self._log.exception(TypeError('filter_value is not a valid type.'))
                 raise TypeError('filter_value is not a valid type.')
 
             fval = self._check('filter_value', rval, list,
@@ -122,6 +125,7 @@ class TIOEndpoint(APIEndpoint):
         # If the status that has been reported back is "error", then we will
         # need to throw the appropriate error back to the user.
         if status == 'error':
+            self._log.exception(FileDownloadError(resource, resource_id, file_id))
             raise FileDownloadError(resource, resource_id, file_id)
 
         # Return the status to the caller.
@@ -172,6 +176,7 @@ class TIOIterator(APIResultsIterator):
         # we run into that limit.  If we have, then return a StopIteration
         # exception.
         if self._pages_total and self._pages_requested >= self._pages_total:
+            self._log.exception('StopIteration')
             raise StopIteration()
 
         # Lets make the actual call at this point.

@@ -78,6 +78,7 @@ class CredentialsAPI(TIOEndpoint):
                 resp.append(p)
 
             else :
+                self._log.exception(TypeError('permission object is not tuple or dict type'))
                 raise TypeError('permission object is not tuple or dict type')
         return resp
 

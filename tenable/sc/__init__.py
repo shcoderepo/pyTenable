@@ -241,6 +241,7 @@ class TenableSC(APISession):
         try:
             self.info = self.system.details()
         except:
+            self._log.exception(ConnectionError('No Tenable.sc Instance at {}:{}'.format(host, port)))
             raise ConnectionError('No Tenable.sc Instance at {}:{}'.format(host, port))
 
         # Now we will try to interpret the Tenable.sc information into
@@ -257,6 +258,7 @@ class TenableSC(APISession):
                     'X-SecurityCenter': str(self.info['token'])
                 })
         except:
+            self._log.exception(ConnectionError('Invalid Tenable.sc Instance'))
             raise ConnectionError('Invalid Tenable.sc Instance')
 
         # Now we will attempt to authenticate to the API using any auth settings
@@ -278,6 +280,7 @@ class TenableSC(APISession):
             try:
                 d = response.json()
                 if d['error_code']:
+                    self._log.exception(APIError(response))
                     raise APIError(response)
             except ValueError:
                 pass
@@ -321,6 +324,8 @@ class TenableSC(APISession):
 
         elif access_key != None and secret_key != None:
             if semver.VersionInfo.parse(self.version).match('<5.13.0'):
+                self._log.exception(ConnectionError(
+                    'API Keys not supported on this version of Tenable.sc'))
                 raise ConnectionError(
                     'API Keys not supported on this version of Tenable.sc')
             self._session.headers.update({

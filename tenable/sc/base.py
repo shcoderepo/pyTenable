@@ -106,6 +106,7 @@ class SCEndpoint(APIEndpoint):
         # some simple checking to ensure that we are being passed good data
         # before we expand the tuple.
         if len(item) < 2 or len(item) > 3:
+            self._log.exception(TypeError('{} must be exactly 1 operator and 1-2 items'.format(item)))
             raise TypeError('{} must be exactly 1 operator and 1-2 items'.format(item))
         self._check('operator', item[0], str, choices=oper.keys())
         self._check('operand1', item[1], [int, tuple])
@@ -241,6 +242,7 @@ class SCResultsIterator(APIResultsIterator):
         # we run into that limit.  If we have, then return a StopIteration
         # exception.
         if self._pages_total and self._pages_requested >= self._pages_total:
+            self._log.exception('StopIteration')
             raise StopIteration()
 
         # Now we need to do is construct the query with the current offset

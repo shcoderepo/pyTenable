@@ -275,6 +275,7 @@ class ScanPolicyAPI(SCEndpoint):
         '''
         # Firstly we need to check that some specific values are set
         if 'name' not in kw:
+            self._log.exception(UnexpectedValueError('name is a required parameter'))
             raise UnexpectedValueError('name is a required parameter')
         kw['template_id'] = self._check(
             'template_id', kw.get('template_id', 1), int)

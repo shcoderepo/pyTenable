@@ -104,6 +104,7 @@ class ContainerSecurity(APISession):
             self._secret_key = os.getenv('TIO_SECRET_KEY')
 
         if not self._access_key or not self._secret_key:
+            self._log.exception(UnexpectedValueError('No valid API Keypair Defined'))
             raise UnexpectedValueError('No valid API Keypair Defined')
 
         if registry:

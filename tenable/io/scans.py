@@ -134,6 +134,7 @@ class ScansAPI(TIOEndpoint):
 
             # if no match was discovered, then raise an invalid warning.
             if not match:
+                self._log.exception(UnexpectedValueError('policy setting is invalid.'))
                 raise UnexpectedValueError('policy setting is invalid.')
             del kwargs['policy']
 

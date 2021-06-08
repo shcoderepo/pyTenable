@@ -168,6 +168,7 @@ class ExclusionsAPI(TIOEndpoint):
         elif enabled is False:
             schedule = {'enabled': False}
         else:
+            self._log.exception(TypeError('enabled must be a boolean value.'))
             raise TypeError('enabled must be a boolean value.')
 
         # Next we need to construct the rest of the payload

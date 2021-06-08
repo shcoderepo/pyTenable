@@ -18,6 +18,7 @@ class CSIterator(APIResultsIterator):
         # we run into that limit.  If we have, then return a StopIteration
         # exception.
         if self._pages_total and self._pages_requested >= self._pages_total:
+            self._log.exception('StopIteration')
             raise StopIteration()
 
         # Lets make the actual call at this point.

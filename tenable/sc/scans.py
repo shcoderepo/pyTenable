@@ -174,6 +174,8 @@ class ScanAPI(SCEndpoint):
         if 'plugin_id' in kw and 'policy_id' in kw:
             # if both are specified, something is wrong here and we should throw
             # an exception.
+            self._log.exception(UnexpectedValueError(
+                'specify either a plugin_id or a policy_id for a scan, not both.'))
             raise UnexpectedValueError(
                 'specify either a plugin_id or a policy_id for a scan, not both.')
 

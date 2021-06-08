@@ -433,6 +433,7 @@ class WorkbenchesAPI(TIOEndpoint):
                 # format is specified, we must use the vuln_by_asset report, so
                 # will ignore the chapters attribute in those cases.
                 if 'chapters' not in kw:
+                    self._log.exception(UnexpectedValueError('no chapters were specified'))
                     raise UnexpectedValueError('no chapters were specified')
                 else:
                     params['chapter'] = ';'.join(

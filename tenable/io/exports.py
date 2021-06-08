@@ -65,17 +65,20 @@ class ExportsIterator(APIResultsIterator):
             # set to finished, then we will break the iteration.
             if (status['status'] == 'FINISHED'
               and len(status['chunks_unfinished']) < 1):
+                self._log.exception('StopIteration')
                 raise StopIteration()
 
             if status['status'] != 'FINISHED' and self._wait_for_complete:
                 status['chunks_unfinished'] = list()
 
             if status['status'] == 'ERROR':
+                self._log.exception(TioExportsError(self.type, self.uuid))
                 raise TioExportsError(self.type, self.uuid)
 
             if (status['status'] == 'QUEUED' and self.timeout
               and time.time() > self.timeout):
                 self.cancel()
+                self._log.exception(TioExportsTimeout(self.type, self.uuid))
                 raise TioExportsTimeout(self.type, self.uuid)
 
             return status
@@ -151,6 +154,7 @@ class ExportsIterator(APIResultsIterator):
         Cancels the export.
         '''
         self._api.get('{}/export/{}/cancel'.format(self.type, self.uuid)).json()
+        self._log.exception('export cancelled')
         raise
 
 
@@ -294,6 +298,7 @@ class ExportsAPI(TIOEndpoint):
             try:
                 network = IPv4Network(cidr)
             except ValueError:
+                self._log.exception(UnexpectedValueError('{} is not a valid CIDR'.format(cidr)))
                 raise UnexpectedValueError('{} is not a valid CIDR'.format(cidr))
 
             # Assuming everything has passed, then we will add the filter to the
