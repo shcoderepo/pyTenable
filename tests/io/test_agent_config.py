@@ -114,7 +114,7 @@ def test_agentconfig_show_standard_user_should_fail(stdapi):
 
 @pytest.mark.vcr()
 def test_agentconfig_edit_success(api):
-    resp = api.agent_config.edit(scanner_id=0, software_update=True)
+    resp = api.agent_config.edit(scanner_id=False)
     assert isinstance(resp, dict)
     check(resp, 'auto_unlink', dict, allow_none=True)
     check(resp, 'software_update', bool, allow_none=True)

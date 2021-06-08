@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: "--5dd50ec8c631b6d42af9aadb4954d7a4\r\nContent-Disposition: form-data; name=\"no_enc\"\r\n\r\n1\r\n--5dd50ec8c631b6d42af9aadb4954d7a4\r\nContent-Disposition:
-      form-data; name=\"Filedata\"; filename=\"testfile.txt\"\r\n\r\ntest\r\n--5dd50ec8c631b6d42af9aadb4954d7a4--\r\n"
+    body: "--bc2ab378fa31d2008f7bd36d10936912\r\nContent-Disposition: form-data; name=\"no_enc\"\r\n\r\n1\r\n--bc2ab378fa31d2008f7bd36d10936912\r\nContent-Disposition:
+      form-data; name=\"Filedata\"; filename=\"testfile.txt\"\r\n\r\ntest\r\n--bc2ab378fa31d2008f7bd36d10936912--\r\n"
     headers:
       Accept:
       - '*/*'
@@ -12,7 +12,7 @@ interactions:
       Content-Length:
       - '244'
       Content-Type:
-      - multipart/form-data; boundary=5dd50ec8c631b6d42af9aadb4954d7a4
+      - multipart/form-data; boundary=bc2ab378fa31d2008f7bd36d10936912
       User-Agent:
       - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
         (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
@@ -23,7 +23,7 @@ interactions:
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA6tWSsvMSS0tyMlPTElNUbJSKkktLgEJ6ZVUlMQbKtUCAC+32PMhAAAA
+        H4sIAAAAAAAAA6tWSsvMSS0tyMlPTElNUbJSKkktLgEJ6ZVUlMQbKdUCAHYJnvEhAAAA
     headers:
       Cache-Control:
       - no-store
@@ -34,7 +34,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 09:32:22 GMT
+      - Tue, 08 Jun 2021 13:03:25 GMT
       Expect-CT:
       - enforce, max-age=86400
       Expires:
@@ -55,9 +55,9 @@ interactions:
       X-Frame-Options:
       - DENY
       X-Gateway-Site-ID:
-      - nginx-router-c3gdt-ap-southeast-1-prod
+      - nginx-router-ssu2q-ap-southeast-1-prod
       X-Request-Uuid:
-      - 06a395b2431e5505a3c173e77dd451e8
+      - 000c97c0c2605807537461a651e24b42
       X-Xss-Protection:
       - 1; mode=block
     status:

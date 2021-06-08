@@ -142,7 +142,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 08:47:30 GMT
+      - Tue, 08 Jun 2021 12:59:48 GMT
       Expect-CT:
       - enforce, max-age=86400
       Expires:
@@ -163,16 +163,16 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - fe5701bbff5bffeaa4f240379f775f49
+      - 93e928a44f0e8c5f7eca5b09e1e03ad0
       X-Xss-Protection:
       - 1; mode=block
     status:
       code: 200
       message: OK
 - request:
-    body: '{"name": "0623a194-eec9-42dd-968d-da11362bd188", "description": "", "schedule":
-      {"enabled": true, "starttime": "2021-06-08 08:47:29", "endtime": "2021-06-08
-      09:47:29", "timezone": "Etc/UTC", "rrules": {"freq": "ONETIME", "interval":
+    body: '{"name": "1b2a71c6-598f-448c-8032-e36151aac7b0", "description": "", "schedule":
+      {"enabled": true, "starttime": "2021-06-08 12:59:48", "endtime": "2021-06-08
+      13:59:48", "timezone": "Etc/UTC", "rrules": {"freq": "ONETIME", "interval":
       1}}}'
     headers:
       Accept:
@@ -197,11 +197,11 @@ interactions:
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA3WPu07EMBBFfwW5joXtJM6jRSkogGapo4lnrLXIJovtULDKvzOhgQK60dwz59o3
-        gZRcDNcc1kX0QhRigQvxpKwpQXeVJHKdrAyi7GyLEkHr0poJddsyvW0BmbZIhL7yEhWUsgLv5VSX
-        TjZq0r6Bpp46zbSLBEfTiJC5RHOHroyqVSFmSHm8rBh8cP8xR5VWVjUNq9ZI43Y9oDRO8+reiNMc
-        NypEcmfCbebrm0gZYs7h+09GGS2Vlaq9U21fNb3p+FG04B959yuHaf6Rx8jmdKh9pHe+enkeTo9P
-        A5NhyRQ/YOalFnshDu3nuhzqIbv719OD2PcvdFIgo3MBAAA=
+        H4sIAAAAAAAAA3WQsVLEIBCGX8WhDiMLCSFpnRQWanPWmYVs5hhzyQnEwpu8u2CjhXY783/7/Qs3
+        NlF0wV+T31bWM1axFS+UJ7ASW3CaN52ZeV0bx41QkpPS0ACia63I9L77KdMGgLSsFTetQF4LcByt
+        BY6COqHAztYU2gXC0jROmHIJaKmgacF0FVswpvGyTX727j+mVIHQojVZtQUa92uB4miXzb1RTlPY
+        qWLRnWnal7x9YzFhSMl/v0kKCVxoLswdyL7p+trko2id/sjVrxzt8iMPIZtjUc+B3vPWy/Nwenwa
+        MunXROEDl/J97KhY0X5ua1EPyd2/nh7YcXwBZMSG8XMBAAA=
     headers:
       Cache-Control:
       - no-cache
@@ -212,7 +212,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 08:47:30 GMT
+      - Tue, 08 Jun 2021 12:59:49 GMT
       Set-Cookie:
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
@@ -229,7 +229,7 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - ce9b9b8f555c96c2397da9d545c4123e
+      - 553651817313260b746879ab9bb8f2c8
       X-Xss-Protection:
       - 1; mode=block
     status:
@@ -252,15 +252,15 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: GET
-    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106077
+    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106078
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA3WPu07EMBBFfwW5joXtJM6jRSkogGapo4lnrLXIJovtULDKvzOhgQK60dwz59o3
-        gZRcDNcc1kX0QhRigQvxpKwpQXeVJHKdrAyi7GyLEkHr0poJddsyvW0BmbZIhL7yEhWUsgLv5VSX
-        TjZq0r6Bpp46zbSLBEfTiJC5RHOHroyqVSFmSHm8rBh8cP8xR5VWVjUNq9ZI43Y9oDRO8+reiNMc
-        NypEcmfCbebrm0gZYs7h+09GGS2Vlaq9U21fNb3p+FG04B959yuHaf6Rx8jmdKh9pHe+enkeTo9P
-        A5NhyRQ/YOalFnshDu3nuhzqIbv719OD2PcvdFIgo3MBAAA=
+        H4sIAAAAAAAAA3WQsVLEIBCGX8WhDiMLCSFpnRQWanPWmYVs5hhzyQnEwpu8u2CjhXY783/7/Qs3
+        NlF0wV+T31bWM1axFS+UJ7ASW3CaN52ZeV0bx41QkpPS0ACia63I9L77KdMGgLSsFTetQF4LcByt
+        BY6COqHAztYU2gXC0jROmHIJaKmgacF0FVswpvGyTX727j+mVIHQojVZtQUa92uB4miXzb1RTlPY
+        qWLRnWnal7x9YzFhSMl/v0kKCVxoLswdyL7p+trko2id/sjVrxzt8iMPIZtjUc+B3vPWy/Nwenwa
+        MunXROEDl/J97KhY0X5ua1EPyd2/nh7YcXwBZMSG8XMBAAA=
     headers:
       Cache-Control:
       - no-cache
@@ -271,7 +271,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 08:47:34 GMT
+      - Tue, 08 Jun 2021 12:59:53 GMT
       Set-Cookie:
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
@@ -288,17 +288,17 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - 4960150dfb419279e80b2b8755cda2e3
+      - b576f9c843a78803ee5fff1e53312427
       X-Xss-Protection:
       - 1; mode=block
     status:
       code: 200
       message: OK
 - request:
-    body: '{"description": "exclusion_description", "name": "some_name", "uuid": "6deedf4f-d0a3-4aff-b53c-70b1f7a75b91",
-      "creation_date": 1623142050, "last_modification_date": 1623142050, "id": 106077,
-      "core_updates_blocked": true, "schedule": {"starttime": "2021-06-08 14:17:30",
-      "endtime": "2021-06-08 13:47:30", "enabled": true, "rrules": {"freq": "WEEKLY",
+    body: '{"description": "exclusion_description", "name": "some_name", "uuid": "811e6243-870a-401c-abb1-a0e9031bfb80",
+      "creation_date": 1623157189, "last_modification_date": 1623157189, "id": 106078,
+      "core_updates_blocked": true, "schedule": {"starttime": "2021-06-08 18:29:49",
+      "endtime": "2021-06-08 17:59:49", "enabled": true, "rrules": {"freq": "WEEKLY",
       "interval": 20, "byweekday": "SU,MO,TU,WE,TH,FR,SA"}, "timezone": "UTC"}}'
     headers:
       Accept:
@@ -319,15 +319,15 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: PUT
-    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106077
+    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106078
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA22OzU7DMBCEXwX57Eh2/lxyQygICRASTVRxihx7Law6SbEdoFR9dzY5AIfedmdm
-        v9kT0RCUt4dop5FUBL6UmwPO3X+dklEOgHaYBujWmZJ5thqlUgNok5tEM5kluTQm6YtMJYL13Agp
-        iv6aY1p5kHHlyogkXqYZz1NWMEqcDLEbJm2NVRczG0qWKs5KJgSiJg/dfFhCoevdpPaAbvQzUBLU
-        G+jZ4fWJhCh9jHZ9PGUpT1iZsM0VzysuqozhUzDqC35W5b++7N0f3HskhwVtPLzj1a6uHx5fMWjH
-        CP5DupWEe3/8BNhreURh29KnZ9q0dFfT5p7evdDtDTlTsjR/T+PS3ja35Hz+AfQZLXiMAQAA
+        H4sIAAAAAAAAA22OQU+EMBCF/4rpuSQtsFC4GYMxUWPiLtl4Im0ZYrNA17ao64b/7sBB97C3mffe
+        fG/OpAWvnTkGY0dSEvjW/eRxbi51SkY5ANreDtCsMyXTZFqUBOeQxWkSiZzJKGVcR1IpHkkGBUu4
+        6pRgmNYOZFi5MiCJZ3HCNzkXBSW99KEZbGs6o69lipySpYqzjOUCUdZBMx2XkG9Ub/UB0A1uAkq8
+        fod26vH6THyQLgSzPh6zmEcsi5i44aKMizIt8CkY2yt+Xm7+fKn6f7hzSPYLunPwgVf7qnp8esOg
+        GQO4T9mvJNzV6Qvg0MoTCtuaPr/QXU33Fd090PtXur0lMyVL848dl/Z6d0fm+RczhddXjAEAAA==
     headers:
       Cache-Control:
       - no-cache
@@ -338,7 +338,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 08:47:38 GMT
+      - Tue, 08 Jun 2021 12:59:57 GMT
       Set-Cookie:
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
@@ -355,7 +355,7 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - cf0aa2d7422bfd1d2b62008b4b9230fd
+      - e0750e4adf85413c3bc911d6ada3c554
       X-Xss-Protection:
       - 1; mode=block
     status:
@@ -378,15 +378,15 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: GET
-    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106077
+    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106078
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA22OzU7DMBCEXwX57Eh2/lxyQygICRASTVRxihx7Law6SbEdoFR9dzY5AIfedmdm
-        v9kT0RCUt4dop5FUBL6UmwPO3X+dklEOgHaYBujWmZJ5thqlUgNok5tEM5kluTQm6YtMJYL13Agp
-        iv6aY1p5kHHlyogkXqYZz1NWMEqcDLEbJm2NVRczG0qWKs5KJgSiJg/dfFhCoevdpPaAbvQzUBLU
-        G+jZ4fWJhCh9jHZ9PGUpT1iZsM0VzysuqozhUzDqC35W5b++7N0f3HskhwVtPLzj1a6uHx5fMWjH
-        CP5DupWEe3/8BNhreURh29KnZ9q0dFfT5p7evdDtDTlTsjR/T+PS3ja35Hz+AfQZLXiMAQAA
+        H4sIAAAAAAAAA22OQU+EMBCF/4rpuSQtsFC4GYMxUWPiLtl4Im0ZYrNA17ao64b/7sBB97C3mffe
+        fG/OpAWvnTkGY0dSEvjW/eRxbi51SkY5ANreDtCsMyXTZFqUBOeQxWkSiZzJKGVcR1IpHkkGBUu4
+        6pRgmNYOZFi5MiCJZ3HCNzkXBSW99KEZbGs6o69lipySpYqzjOUCUdZBMx2XkG9Ub/UB0A1uAkq8
+        fod26vH6THyQLgSzPh6zmEcsi5i44aKMizIt8CkY2yt+Xm7+fKn6f7hzSPYLunPwgVf7qnp8esOg
+        GQO4T9mvJNzV6Qvg0MoTCtuaPr/QXU33Fd090PtXur0lMyVL848dl/Z6d0fm+RczhddXjAEAAA==
     headers:
       Cache-Control:
       - no-cache
@@ -397,7 +397,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 08:47:42 GMT
+      - Tue, 08 Jun 2021 13:00:01 GMT
       Set-Cookie:
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
@@ -414,17 +414,17 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - bbbb7f8542a8991e5f62be6ddf782565
+      - 203112a5226ec308a220b56dcd4b3d4b
       X-Xss-Protection:
       - 1; mode=block
     status:
       code: 200
       message: OK
 - request:
-    body: '{"description": "exclusion_description", "name": "some_name", "uuid": "6deedf4f-d0a3-4aff-b53c-70b1f7a75b91",
-      "creation_date": 1623142050, "last_modification_date": 1623142058, "id": 106077,
-      "core_updates_blocked": true, "schedule": {"starttime": "2021-06-08 14:17:38",
-      "endtime": "2021-06-08 13:47:38", "enabled": true, "rrules": {"freq": "MONTHLY",
+    body: '{"description": "exclusion_description", "name": "some_name", "uuid": "811e6243-870a-401c-abb1-a0e9031bfb80",
+      "creation_date": 1623157189, "last_modification_date": 1623157197, "id": 106078,
+      "core_updates_blocked": true, "schedule": {"starttime": "2021-06-08 18:29:57",
+      "endtime": "2021-06-08 17:59:57", "enabled": true, "rrules": {"freq": "MONTHLY",
       "interval": 20, "bymonthday": 8}, "timezone": "UTC"}}'
     headers:
       Accept:
@@ -445,15 +445,15 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: PUT
-    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106077
+    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106078
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA22OO0/EMBCE/wpynUh2HnZIew0Fj+YoqCLHXussHPvwA3Gc8t/ZpACK63ZnZr/Z
-        K9GQVLTnbIMnI4Ev5UrCefqvV8TLBdBOYYFpnytSitUocQ2gTWdqTWVbd9KYeu5bVQs6MyOk6Od7
-        hmkVQeadKzOSGG9a1jW0pxVxMuVpCdoaq25lOK/IVsUop0IgKkSYynkLpWl2Qb0DujkWqEhSJ9DF
-        4fWVpCxjznZ/vKENqymv6XDHupGJsR3wKfD6ht+O3a8vZ/cHjxHJaUObCB949fTyfHx4fMOk9Rni
-        p3Q7Cvf5sgSfT1peUBnIWpGt6Dv4rez1eCDr+gOEz9DDewEAAA==
+        H4sIAAAAAAAAA22QP2+EMAzFv0rlmUgJHBBYu3Ton+U6dEJJMLqoIbkmoer1xHevYWg73Gb7Pf+e
+        5SuMmEy052yDhx7wy7glUT38nxfg1YwkpzDjsNcFLIsdaSSFwKY8VEy2XLEDF4YprQVTHDteCT1p
+        ycltIqq8c1UmkmjKStStkF0BTqU8zGG0kzU3PCWvC9iiBG94KwkVIg7LeTOlQbtg3pHUHBcsIJkT
+        jouj7SukrGLOdj+85KVgvGFc3gnZl11ft3QU+vGG3vb1r660+4PHSOS0oaeIH7T19PJ8fHh8I6f1
+        GeOncjuKen2Zg8+nUV22F8FawBb0HfwW9nq8h3X9AcLITfx7AQAA
     headers:
       Cache-Control:
       - no-cache
@@ -464,7 +464,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 08:47:46 GMT
+      - Tue, 08 Jun 2021 13:00:05 GMT
       Set-Cookie:
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
@@ -481,7 +481,7 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - e38cb6e1770948513d07b864247e923e
+      - 0a88c74cc161398b1e7fca9f53050410
       X-Xss-Protection:
       - 1; mode=block
     status:
@@ -504,15 +504,15 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: GET
-    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106077
+    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106078
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA22OO0/EMBCE/wpynUh2HnZIew0Fj+YoqCLHXussHPvwA3Gc8t/ZpACK63ZnZr/Z
-        K9GQVLTnbIMnI4Ev5UrCefqvV8TLBdBOYYFpnytSitUocQ2gTWdqTWVbd9KYeu5bVQs6MyOk6Od7
-        hmkVQeadKzOSGG9a1jW0pxVxMuVpCdoaq25lOK/IVsUop0IgKkSYynkLpWl2Qb0DujkWqEhSJ9DF
-        4fWVpCxjznZ/vKENqymv6XDHupGJsR3wKfD6ht+O3a8vZ/cHjxHJaUObCB949fTyfHx4fMOk9Rni
-        p3Q7Cvf5sgSfT1peUBnIWpGt6Dv4rez1eCDr+gOEz9DDewEAAA==
+        H4sIAAAAAAAAA22QP2+EMAzFv0rlmUgJHBBYu3Ton+U6dEJJMLqoIbkmoer1xHevYWg73Gb7Pf+e
+        5SuMmEy052yDhx7wy7glUT38nxfg1YwkpzDjsNcFLIsdaSSFwKY8VEy2XLEDF4YprQVTHDteCT1p
+        ycltIqq8c1UmkmjKStStkF0BTqU8zGG0kzU3PCWvC9iiBG94KwkVIg7LeTOlQbtg3pHUHBcsIJkT
+        jouj7SukrGLOdj+85KVgvGFc3gnZl11ft3QU+vGG3vb1r660+4PHSOS0oaeIH7T19PJ8fHh8I6f1
+        GeOncjuKen2Zg8+nUV22F8FawBb0HfwW9nq8h3X9AcLITfx7AQAA
     headers:
       Cache-Control:
       - no-cache
@@ -523,7 +523,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 08:47:50 GMT
+      - Tue, 08 Jun 2021 13:00:09 GMT
       Set-Cookie:
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
@@ -540,17 +540,17 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - 29c9247d2834b8c1d02138f87ee2837b
+      - f4b32964b38535119c12678dc420e462
       X-Xss-Protection:
       - 1; mode=block
     status:
       code: 200
       message: OK
 - request:
-    body: '{"description": "exclusion_description", "name": "some_name", "uuid": "6deedf4f-d0a3-4aff-b53c-70b1f7a75b91",
-      "creation_date": 1623142050, "last_modification_date": 1623142066, "id": 106077,
-      "core_updates_blocked": true, "schedule": {"starttime": "2021-06-08 14:17:46",
-      "endtime": "2021-06-08 13:47:46", "enabled": true, "rrules": {"freq": "DAILY",
+    body: '{"description": "exclusion_description", "name": "some_name", "uuid": "811e6243-870a-401c-abb1-a0e9031bfb80",
+      "creation_date": 1623157189, "last_modification_date": 1623157205, "id": 106078,
+      "core_updates_blocked": true, "schedule": {"starttime": "2021-06-08 18:30:05",
+      "endtime": "2021-06-08 18:00:05", "enabled": true, "rrules": {"freq": "DAILY",
       "interval": 20}, "timezone": "UTC"}}'
     headers:
       Accept:
@@ -571,15 +571,15 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: PUT
-    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106077
+    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106078
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA22Ou07EMBBFfwVNHUt24sSQDkGDRAkFVeTYY2GtEy9+IMQq/84kBVBsN7qPM/cC
-        FrNJ/lx8XGEE/DKhZrqn/3oDq16Q7BwXnI67gVq9JWmwiNZJxyzXHZPaOTb3nWGKz8Iprfr5TlDa
-        JNTl4OpCJDG0nZAt73kDQecyLdF65821jJIN7K8EH7hShIoJp3reQ3maQzQnJLekig1k8462Bmpf
-        IBedSvHH8Ja3gvGB8dsbIUehRjnQKFztFb8b5a+v5/AHT4nIeUe7hB/Uerx/en6jnF8Lpk8dDhBs
-        DezU77ju5NeXB9i2H0xovsdoAQAA
+        H4sIAAAAAAAAA22Ou07EMBBFfwVNbUvjZDfxpkPQIFFCQRXZzkRYm8SLHwixyr8zSQEU243u48y9
+        wkDJRX/JPizQAX25qSS++/+6gMXMxHYKM/X7LaAUP7CklaKmOtRSt2jkAZWTxlolDdIJa2VHq5HT
+        LpLJO9dkJqmmqtWxVfokYDIp93MY/OjdjUylagHbK4UNtppRIVJfLlso9XYK7kzs5lhIQHLvNJSJ
+        21dI2cSc/T68wkpJbCTqO6W7Gjs88ihahps+/vrGTn/wGJmcNvQY6YNbj/dPz2+c80um+GmmHQSr
+        gI36HZaN/PryAOv6A8cJoaFoAQAA
     headers:
       Cache-Control:
       - no-cache
@@ -590,7 +590,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 08:47:54 GMT
+      - Tue, 08 Jun 2021 13:00:13 GMT
       Set-Cookie:
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
@@ -607,7 +607,7 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - 6e5b24d797e3fc669c854fd1ad1b27c9
+      - c05657e5a6eacee972b14db7c96df897
       X-Xss-Protection:
       - 1; mode=block
     status:
@@ -632,7 +632,7 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: DELETE
-    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106077
+    uri: https://cloud.tenable.com/scanners/1/agents/exclusions/106078
   response:
     body:
       string: ''
@@ -642,7 +642,7 @@ interactions:
       Connection:
       - keep-alive
       Date:
-      - Tue, 08 Jun 2021 08:47:58 GMT
+      - Tue, 08 Jun 2021 13:00:17 GMT
       Set-Cookie:
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
@@ -657,7 +657,7 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - c4759ac128a60e06ba45ebfcb6259ed9
+      - c68841c7e9dc46988d8148d7c8e77874
       X-Xss-Protection:
       - 1; mode=block
     status:

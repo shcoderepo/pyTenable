@@ -13,8 +13,8 @@ interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
-        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
+      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.7
+        (pyTenable/1.2.7; Python/3.8.6; Windows/AMD64)
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: POST
@@ -22,10 +22,10 @@ interactions:
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA5WQwWrEMAxE/8XnGGyv4yR773cExRqBIbGXOKEtpf9eF7plD3tor6OZeZI+VHnN
-        2OfzTKyuypJjY43T1i5GewL0YrzowXkjSwi99aI6FXfQgRawwV2s7904hcF3aiucJD0Z1Ej5GxPL
-        mQ91NZ36ATJfIg0yaWAS7cGsR7HQozEA9SH2Q2zATBua++WNttuKJjBq3NPtSCU3vQmpzgyhc231
-        QmvF75bz8v73y+4X/Ct0B6U8V8SSuT4+4KH0ueHzC+pDIHaFAQAA
+        H4sIAAAAAAAAA5WQwYrDMAxE/8XnGCyj2Env/Y6gyDIYErvECbul9N/rhe3SQw/b62hmnqSbKl9Z
+        tuk4UlAnBWSDAWM1wGw0koieDUbtLZo4O9cDRtUp3oR2aQFwgN77frS9xU6tJaSY3gwqU/7BcDny
+        rk6mU7/AfiC2YXR6ACKN3rImhEF7jMzODNbg2ICZVmnu8zetl0WaEKTyli57KrnpTUh1ChLpWFp9
+        pKXK35bTfP3/Zc8LPgo9QSlPVbjkUF8f8FL63nB/AElQ6LqFAQAA
     headers:
       Cache-Control:
       - no-store
@@ -36,11 +36,13 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 09:41:29 GMT
+      - Wed, 03 Mar 2021 13:19:52 GMT
       Expect-CT:
       - enforce, max-age=86400
       Pragma:
       - no-cache
+      Server:
+      - tenable.io
       Set-Cookie:
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
@@ -55,9 +57,9 @@ interactions:
       X-Frame-Options:
       - DENY
       X-Gateway-Site-ID:
-      - nginx-router-gcte4-ap-southeast-1-prod
+      - nginx-router-wzijw-ap-southeast-1-prod
       X-Request-Uuid:
-      - 8ba691f7971cac960a32d5781414c530
+      - af3c1344c7054b30e77af75e7f8f32ce
       X-Xss-Protection:
       - 1; mode=block
     status:

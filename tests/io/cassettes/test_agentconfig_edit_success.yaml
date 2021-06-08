@@ -34,7 +34,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 08:39:41 GMT
+      - Tue, 08 Jun 2021 12:57:29 GMT
       Set-Cookie:
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
@@ -47,9 +47,9 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Gateway-Site-ID:
-      - nginx-router-j15ji-ap-southeast-1-prod
+      - nginx-router-ssu2q-ap-southeast-1-prod
       X-Request-Uuid:
-      - 399bac8a9e2ac08e1940f377b29b8b95
+      - 21e05ed35745740737f804486e7ef23f
       X-XSS-Protection:
       - 1; mode=block
     status:

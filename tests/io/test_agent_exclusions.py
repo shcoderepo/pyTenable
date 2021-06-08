@@ -585,6 +585,7 @@ def test_agentexclusions_edit_all_success(api, agentexclusion):
             check(resp, 'core_updates_blocked', bool, allow_none=True)
             check(resp, 'schedule', dict, allow_none=True)
 
+
 @pytest.mark.vcr()
 def test_agentexclusions_list_success(api):
     resp = api.agent_exclusions.list(scanner_id=2)
