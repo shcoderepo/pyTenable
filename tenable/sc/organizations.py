@@ -350,7 +350,7 @@ class OrganizationAPI(SCEndpoint):
     def accept_risk_rules(self, organization_id, repos=None, plugin=None, port=None):
         f'''
         Retrieves the accepted risk rules for the organization and optionally
-        will filter based on the paramaters specified.
+        will filter based on the parameters specified.
 
         :sc-api:`organization: accept-risk-rule 
         <Organization.html#OrganizationRESTReference-/organization/{organization_id}/acceptRiskRule>`
@@ -386,7 +386,7 @@ class OrganizationAPI(SCEndpoint):
     def recast_risk_rules(self, organization_id, repos=None, plugin=None, port=None):
         '''
         Retrieves the recasted risk rules for the organization and optionally
-        will filter based on the paramaters specified.
+        will filter based on the parameters specified.
 
         :sc-api:`organization: recast-risk-rule
         <Organization.html#OrganizationRESTReference-/organization/{organization_id}/recastRiskRule>`
