@@ -462,7 +462,7 @@ def test_network_asset_count_network_num_days_invalidinputerror(api):
 
 
 @pytest.mark.vcr()
-def test_networks_network_asset_count(api):
+def test_network_asset_count_network_success(api):
     '''
     test to raise exception when type of network_id param does not match the expected type.
     '''

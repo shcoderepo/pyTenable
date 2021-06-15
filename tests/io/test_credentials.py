@@ -492,7 +492,7 @@ def test_credentials_list(api, scan):
     assert count == credentials.total
 
 
-@pytest.mark.vcrx()
+@pytest.mark.vcr()
 def test_credentials_permissions_constructor_typeerror(api):
     """
     test to raise the exception when the required type of variable is not passed

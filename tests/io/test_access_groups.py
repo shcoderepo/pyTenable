@@ -13,7 +13,7 @@ def rules():
 @pytest.fixture
 def agroup(request, api, vcr, rules):
     with vcr.use_cassette('test_access_groups_create_success'):
-        group = api.access_groups.create('Example6', rules=rules)
+        group = api.access_groups.create('Example', rules=rules)
 
     def teardown():
         try:
@@ -157,7 +157,7 @@ def test_access_group_edit_id_unexpectedvalueerror(api):
 @pytest.mark.vcr()
 def test_access_group_edit_success(api, agroup, group, rules):
     g = api.access_groups.edit(agroup['id'],
-                               name='Updated2',
+                               name='Updated',
                                rules=rules,
                                principals=[('group', group['uuid'])]
                                )
