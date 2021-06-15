@@ -1,3 +1,4 @@
+---
 interactions:
 - request:
     body: null
@@ -34,7 +35,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 07 Jun 2021 12:55:28 GMT
+      - Wed, 09 Jun 2021 03:22:29 GMT
       Expect-CT:
       - enforce, max-age=86400
       Pragma:
@@ -53,9 +54,9 @@ interactions:
       X-Frame-Options:
       - DENY
       X-Gateway-Site-ID:
-      - nginx-router-gcte4-ap-southeast-1-prod
+      - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - 2e7fb11d622e283bf72bdedd7bf7ee09
+      - eb4f1e6a6fc58741d48b30f4db082384
       X-Xss-Protection:
       - 1; mode=block
     status:
@@ -104,7 +105,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 07 Jun 2021 12:55:29 GMT
+      - Wed, 09 Jun 2021 03:22:30 GMT
       Expect-CT:
       - enforce, max-age=86400
       Pragma:
@@ -123,9 +124,9 @@ interactions:
       X-Frame-Options:
       - DENY
       X-Gateway-Site-ID:
-      - nginx-router-gcte4-ap-southeast-1-prod
+      - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - 407d7b1602a3f45afdaa6eda53cf4cf7
+      - 4f42cf179b2d22bb6018f4907eadc84f
       X-Xss-Protection:
       - 1; mode=block
     status:

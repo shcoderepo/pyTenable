@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"name": "e56c52f3-e133-4e6c-ac36-36018643a17f"}'
+    body: '{"name": "36e4d210-1c90-4bbc-8ce2-fe43cf49b640"}'
     headers:
       Accept:
       - '*/*'
@@ -24,9 +24,9 @@ interactions:
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAy3NQQoDIQxA0btkPQEz0UR7maIxwixqoXRWpXevA90//v/AeR4dbhCcm6oZ7kUY
-        Y+sBswbBamQ6orLnABvM+vClPYmlfTA68dIutiALsgTKErmSjqWvMhGVxPsG9pzvekx/3f/LnoUp
-        hhXpJWGstWAhVnQp1KQbt+jw/QEGtJMnogAAAA==
+        H4sIAAAAAAAAAy3NQQoCMQxA0bt0PYGmSdPGy0jSpjALRxBdiXd3BPeP/9/p9dpnuqTVVXM2h9a6
+        AosJ+KoEzUtZVXs3orSlw25xapLgWTADDs3A7gP6iAIrmMZideF86l8ZEbUSb2ncj6ftRzyu/+Xs
+        QsiZIKZWYDMFRWoQougyBzlH+nwBGerBb6IAAAA=
     headers:
       Cache-Control:
       - no-store
@@ -37,7 +37,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 14 Jun 2021 18:18:40 GMT
+      - Tue, 15 Jun 2021 07:19:53 GMT
       Expect-CT:
       - enforce, max-age=86400
       Pragma:
@@ -56,7 +56,7 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-j15ji-ap-southeast-1-prod
       X-Request-Uuid:
-      - 94e910c6a01ccf32ba83ab808abfb19d
+      - 10ddb53a05dd85d4b8661d7697927042
       X-XSS-Protection:
       - 1; mode=block
     status:
@@ -79,16 +79,16 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: GET
-    uri: https://cloud.tenable.com/access-groups/edadd9e8-fa3d-448d-9738-0c71e91d8c8d
+    uri: https://cloud.tenable.com/access-groups/a82bbf01-6c7e-4722-9725-09fa57ff6cd1
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA6WRT0/DMAzFv0vOS4nbLEt6QoLdQHDYCTRVaeKiSv1Hkk5M07473hga3JCQcvHz
-        e7H184G5cUi2HTBU89x6VjKvVQFSFBy9WXJpreEGihVHZaBW3hW1RLZgLqBN6CubKJOLHLhQHOQG
-        dEmvMNlS6RfyzZP/k+88G7313qDmjS08l1J7blaF5sKtAA147bQn72B7JPf6w/ZTh4oU23WVjRFT
-        ZGVju4hf0hwxXJUdFe04sBIWLCabZmqxu6fH54f1Zn1Pv4S5Q9JeDyztp9OEdtpJ0scJg01jOG34
-        TnXC0J98DEyegdKZyMRNLtn2uL2CqfffRMHmXoDIOUAtiCgir4Vs+CqXoqmVWoJsfpD6T/BCZton
-        HGzdYZUwpjOG24uSubFnv7b8c2YKo8MY2+GtIiAOh1RRgy6QKA9CHD8BKOxZTE4CAAA=
+        H4sIAAAAAAAAA6WRy07DMBBF/8XrOnhcx6mzQoLuQLDoClRFdjxBkfLCdiqqqv/OtBQVdkgsfeZe
+        j3V8YPU4JNsOGKp5bj0rmV/pJSix5OhNzpW1hhtYFhy1Aad9vXQK2YLVAW1CX9lEHSkkcKE55BtR
+        lGDKXGYK9Avl5sn/KXfebVfSuUYA13WBXBVSclPInAvT2LxoGl17oOxge6T0+sP2U4eaiO26ysaI
+        KbKysV3ELzRHDFeyo0M7DqyEBYvJpplG7O7p8flhvVnf0y1h7pDY64Gl/XTa0E47RXycMNg0BiL4
+        TueEoT/lGBiZgV5lIhM3UrHtcXsV4/bfRsFKL0BIDuAEGUXkTqiGF1KJxmmdg2p+mPpP8WJm2icc
+        rOuwShjTWcPthWT12LNfr/xzZwpjjTG2w1tFQmocUkUD+oFEfRDi+AkPDjhtTgIAAA==
     headers:
       Cache-Control:
       - no-store
@@ -99,7 +99,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 14 Jun 2021 18:18:41 GMT
+      - Tue, 15 Jun 2021 07:19:54 GMT
       Expect-CT:
       - enforce, max-age=86400
       Pragma:
@@ -118,7 +118,7 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-j15ji-ap-southeast-1-prod
       X-Request-Uuid:
-      - 60bc9103892bf457f4c3735c3f0465c7
+      - 684d501e180b7f1eb68d1893b27b26b3
       X-XSS-Protection:
       - 1; mode=block
     status:
@@ -127,7 +127,7 @@ interactions:
 - request:
     body: '{"name": "Updated2", "all_users": false, "all_assets": false, "rules":
       [{"operator": "eq", "terms": ["192.168.0.0/24"], "type": "ipv4"}], "principals":
-      [{"type": "group", "principal_id": "0e3b77cc-2963-4bd0-8706-ac1c7f473e80"}]}'
+      [{"type": "group", "principal_id": "f89900ab-7789-46a6-bf53-7b22f5988a33"}]}'
     headers:
       Accept:
       - '*/*'
@@ -147,18 +147,18 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: PUT
-    uri: https://cloud.tenable.com/access-groups/edadd9e8-fa3d-448d-9738-0c71e91d8c8d
+    uri: https://cloud.tenable.com/access-groups/a82bbf01-6c7e-4722-9725-09fa57ff6cd1
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA6VRTWvcMBD9LzqvXI0k62NPhVJCLm1p2ktLMLI0DgavrcpyYAn5753dbOjmUgoF
-        XebNezNv9J5YXOYaxhlLt21jYnuWnFGgheKYfMt1CJ57UJaj8dCbFFWvke1YLBgqpi5U0kghgQvD
-        QX8Dt6enfNMa94N4W05/4WnVyPbMO+/GFFLy6PgQVOJau8S9VY6LaAE9JBddIu4cDkjs7y+jJSFh
-        mrqwrlhXth/CtOILtK1Y/iCPVIzLzPZyx9Ya6kYt9uXr5w8f7+5uP93QmLJNSODPJ1aP+bRizI+a
-        8CVjCXUpJ4u/qK5YDiceAy8bMK4RjXgnNbt/vt+xXMY5jpl2Xk96KMuW2VW3O18sUPXWxsilN4rr
-        PgnuLP1QiBDtoK1CJ96oLrdja2IrB0oJFOnQRJIow5UR4IxWAezATm5ec+qPrwFDkEmAkBygFxQw
-        Iu+FHriVWgy9MS3o4Sq4/xFezOZjxTn0E3YV13pO5f0FaeJyYG9c/rMmlyXiuo7zQ0fxRJxrR408
-        YSW9eP4N0MtiA9sCAAA=
+        H4sIAAAAAAAAA6WRT2vcMBDFv4vOO440liXLp0IpIZcmJO2lJRhJHgWD11ZlObCEfPdqNxu6uZRC
+        j/Ob9+YP74X5Zc52nCn12zYOrGNDq2oheQ00mAaktQaMqDWQMsKpwddOEtsxn8hmGnqbiwc5CuAK
+        RPON606YrsFKCvWj6LY4/E3XVCjxqDvtti06F7gA5TWB1IhgNDbATbCNDkH5QRTtbPdU1N/fRmMh
+        dpp6u66UV9YFO630hraV0h/yXIpxmVmHO7Zmm7fSYnf3t5+/PDzcfL0uY9I2UYE/X1g+xOOKMT7L
+        wpdIyeYlFUK/Sp0p7Y86JgxWQrUVr/gVSvb4+rhjMY2zH2PZeTnpKS1bZBfd/vRxaI3h3DrQujUg
+        lVXgQlODdoihMW1r6/qD6/x7rUgOKDgIbzhI5zy0nhACydoHaZySnB2vec/JHd4DFhYHLjiCEK5Y
+        LRE4LgNolDw4pRohw0Vw/2M8HxsPmWbrJuozrfmUyqczqfyyZx+u/GdPTIundR3np77E42nOfWnE
+        iXLx89ffCY9ULNsCAAA=
     headers:
       Cache-Control:
       - no-store
@@ -169,7 +169,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 14 Jun 2021 18:18:43 GMT
+      - Tue, 15 Jun 2021 07:19:55 GMT
       Expect-CT:
       - enforce, max-age=86400
       Pragma:
@@ -188,7 +188,7 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-j15ji-ap-southeast-1-prod
       X-Request-Uuid:
-      - 5a9031c84426adcc5413f71066721972
+      - 1ae1ab45b6c7ec485019325116d4343e
       X-XSS-Protection:
       - 1; mode=block
     status:
@@ -213,7 +213,7 @@ interactions:
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: DELETE
-    uri: https://cloud.tenable.com/groups/1119532
+    uri: https://cloud.tenable.com/groups/1119534
   response:
     body:
       string: ''
@@ -225,7 +225,7 @@ interactions:
       Content-Length:
       - '0'
       Date:
-      - Mon, 14 Jun 2021 18:18:43 GMT
+      - Tue, 15 Jun 2021 07:19:56 GMT
       Expect-CT:
       - enforce, max-age=86400
       Pragma:
@@ -240,7 +240,7 @@ interactions:
       X-Gateway-Site-ID:
       - nginx-router-j15ji-ap-southeast-1-prod
       X-Request-Uuid:
-      - f58053949661ec1869c628da468e78b5
+      - 91c1e041f492671289b8aea71373a9dd
       X-XSS-Protection:
       - 1; mode=block
     status:

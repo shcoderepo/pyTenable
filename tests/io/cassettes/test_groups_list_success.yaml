@@ -1,208 +1,60 @@
+---
 interactions:
 - request:
-    body: '{"name": "95aa8b08-98d0-43a4-a2f6-e14cfeb6252f"}'
+    body: null
     headers:
       Accept:
-      - '*/*'
+        - '*/*'
       Accept-Encoding:
-      - gzip, deflate
+        - gzip, deflate
       Connection:
-      - keep-alive
-      Content-Length:
-      - '48'
-      Content-Type:
-      - application/json
+        - keep-alive
       User-Agent:
-      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
-        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
+        - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
+          (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
       X-APIKeys:
-      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
-    method: POST
+        - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
+    method: GET
     uri: https://cloud.tenable.com/groups
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAy3NMQrDMAxA0bt4jsBSZFvuZYpkS5ChKZRmKr17E+j++P+TjmOb6Za4YG5RDDBc
-        gc0HyGwNiKTbwNaJRlrSrg8/dS+qYlmgy8zAqzIoRQVHHuFWqVCc+ipjxpU6LWk897duu7/u/6W1
-        SlLRwHRlYMQGkt2gRGSpBesslr4/OXhfP6IAAAA=
+        H4sIAAAAAAAAA22OwQrCMBBEf0X23EBLamtyU0+exZNISZpVA01S0gSE0n93hfbmHBZ2dt6wM7xi
+        yOME8j5DztaAhHIV+zM2QQHWuZyUHhBkihkLcOg0xultx+5pP2g23ytHGTgOw+42UYDYGH4YnI7X
+        y5nWTHbXh+wTyJaaCS0L6INPyno6rY+ZQ8OruuQMjdizWinBRMVbho2odGN6rmuE5bF8AUTXfvLV
+        AAAA
     headers:
       Cache-Control:
-      - no-store
+        - no-store
       Connection:
-      - keep-alive
+        - keep-alive
       Content-Encoding:
-      - gzip
+        - gzip
       Content-Type:
-      - application/json; charset=utf-8
+        - application/json; charset=utf-8
       Date:
-      - Fri, 04 Jun 2021 15:02:29 GMT
+        - Thu, 10 Jun 2021 03:18:08 GMT
       Expect-CT:
-      - enforce, max-age=86400
+        - enforce, max-age=86400
       Pragma:
-      - no-cache
+        - no-cache
       Set-Cookie:
-      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
+        - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+        - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
+        - max-age=63072000; includeSubDomains
       Transfer-Encoding:
-      - chunked
+        - chunked
       Vary:
-      - accept-encoding
+        - accept-encoding
       X-Content-Type-Options:
-      - nosniff
+        - nosniff
       X-Gateway-Site-ID:
-      - nginx-router-0evnh-us-east-1-eng
-      X-Path-Handler:
-      - tenable-io
+        - nginx-router-j15ji-ap-southeast-1-prod
       X-Request-Uuid:
-      - 1c403c18bc2ac9d3474e2c51ac54d6e1
+        - c92a2d2a394385a4813f0dc8a960b68f
       X-XSS-Protection:
-      - 1; mode=block
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Cookie:
-      - nginx-cloud-site-id=qa-develop
-      User-Agent:
-      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
-        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
-      X-APIKeys:
-      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
-    method: GET
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/groups
-  response:
-    body:
-      string: !!binary |
-        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
-    headers:
-      Cache-Control:
-      - no-store
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - gzip
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 04 Jun 2021 15:02:30 GMT
-      Expect-CT:
-      - enforce, max-age=86400
-      Pragma:
-      - no-cache
-      Set-Cookie:
-      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - accept-encoding
-      X-Content-Type-Options:
-      - nosniff
-      X-Gateway-Site-ID:
-      - nginx-router-0evnh-us-east-1-eng
-      X-Path-Handler:
-      - tenable-io
-      X-Request-Uuid:
-      - ecb9eed1fb9aec2e9f00d23818566915
-      X-XSS-Protection:
-      - 1; mode=block
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '0'
-      Cookie:
-      - nginx-cloud-site-id=qa-develop
-      User-Agent:
-      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
-        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
-      X-APIKeys:
-      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
-    method: DELETE
-    uri: https://qa-develop.cloud.aws.tenablesecurity.com/groups/1013292
-  response:
-    body:
-      string: ''
-    headers:
-      Cache-Control:
-      - no-store
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '0'
-      Date:
-      - Fri, 04 Jun 2021 15:02:31 GMT
-      Expect-CT:
-      - enforce, max-age=86400
-      Pragma:
-      - no-cache
-      Set-Cookie:
-      - nginx-cloud-site-id=qa-develop; path=/; HttpOnly; SameSite=Strict; Secure
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Gateway-Site-ID:
-      - nginx-router-0evnh-us-east-1-eng
-      X-Path-Handler:
-      - tenable-io
-      X-Request-Uuid:
-      - ef4a558e96fcdb20033b1b92d0090fd6
-      X-XSS-Protection:
-      - 1; mode=block
+        - 1; mode=block
     status:
       code: 200
       message: OK

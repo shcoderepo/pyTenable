@@ -1,22 +1,23 @@
+---
 interactions:
 - request:
     body: '{"auto_unlink": {}}'
     headers:
       Accept:
-      - '*/*'
+        - '*/*'
       Accept-Encoding:
-      - gzip, deflate
+        - gzip, deflate
       Connection:
-      - keep-alive
+        - keep-alive
       Content-Length:
-      - '19'
+        - '19'
       Content-Type:
-      - application/json
+        - application/json
       User-Agent:
-      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
-        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
+        - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
+          (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
       X-APIKeys:
-      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
+        - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: PUT
     uri: https://cloud.tenable.com/scanners/1/agents/config
   response:
@@ -26,32 +27,32 @@ interactions:
         Rp1stSvovk7A6sVenhJ9ZDYB2XQ5P+9utAdIAAAA
     headers:
       Cache-Control:
-      - no-cache
+        - no-cache
       Connection:
-      - keep-alive
+        - keep-alive
       Content-Encoding:
-      - gzip
+        - gzip
       Content-Type:
-      - application/json; charset=utf-8
+        - application/json; charset=utf-8
       Date:
-      - Tue, 08 Jun 2021 12:57:29 GMT
+        - Tue, 08 Jun 2021 12:57:29 GMT
       Set-Cookie:
-      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
-      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+        - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+        - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
+        - max-age=63072000; includeSubDomains
       Transfer-Encoding:
-      - chunked
+        - chunked
       Vary:
-      - accept-encoding
+        - accept-encoding
       X-Content-Type-Options:
-      - nosniff
+        - nosniff
       X-Gateway-Site-ID:
-      - nginx-router-ssu2q-ap-southeast-1-prod
+        - nginx-router-ssu2q-ap-southeast-1-prod
       X-Request-Uuid:
-      - 21e05ed35745740737f804486e7ef23f
+        - 21e05ed35745740737f804486e7ef23f
       X-XSS-Protection:
-      - 1; mode=block
+        - 1; mode=block
     status:
       code: 200
       message: OK

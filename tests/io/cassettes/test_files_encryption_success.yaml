@@ -1,66 +1,67 @@
+---
 interactions:
-- request:
-    body: "--bc2ab378fa31d2008f7bd36d10936912\r\nContent-Disposition: form-data; name=\"no_enc\"\r\n\r\n1\r\n--bc2ab378fa31d2008f7bd36d10936912\r\nContent-Disposition:
-      form-data; name=\"Filedata\"; filename=\"testfile.txt\"\r\n\r\ntest\r\n--bc2ab378fa31d2008f7bd36d10936912--\r\n"
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '244'
-      Content-Type:
-      - multipart/form-data; boundary=bc2ab378fa31d2008f7bd36d10936912
-      User-Agent:
-      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
-        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
-      X-APIKeys:
-      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
-    method: POST
-    uri: https://cloud.tenable.com/file/upload
-  response:
-    body:
-      string: !!binary |
-        H4sIAAAAAAAAA6tWSsvMSS0tyMlPTElNUbJSKkktLgEJ6ZVUlMQbKdUCAHYJnvEhAAAA
-    headers:
-      Cache-Control:
-      - no-store
-      Connection:
-      - keep-alive
-      Content-Encoding:
-      - gzip
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Tue, 08 Jun 2021 13:03:25 GMT
-      Expect-CT:
-      - enforce, max-age=86400
-      Expires:
-      - '0'
-      Pragma:
-      - no-cache
-      Set-Cookie:
-      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
-      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - accept-encoding
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - DENY
-      X-Gateway-Site-ID:
-      - nginx-router-ssu2q-ap-southeast-1-prod
-      X-Request-Uuid:
-      - 000c97c0c2605807537461a651e24b42
-      X-Xss-Protection:
-      - 1; mode=block
-    status:
-      code: 200
-      message: OK
+  - request:
+      body: "--5f6e369a5edfae040f2aa290d73f8125\r\nContent-Disposition: form-data; name=\"no_enc\"\r\n\r\n1\r\n--5f6e369a5edfae040f2aa290d73f8125\r\nContent-Disposition:
+        form-data; name=\"Filedata\"; filename=\"test.txt\"\r\n\r\ntest\r\n--5f6e369a5edfae040f2aa290d73f8125--\r\n"
+      headers:
+        Accept:
+          - '*/*'
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        Content-Length:
+          - '240'
+        Content-Type:
+          - multipart/form-data; boundary=5f6e369a5edfae040f2aa290d73f8125
+        User-Agent:
+          - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
+            (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
+        X-APIKeys:
+          - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
+      method: POST
+      uri: https://cloud.tenable.com/file/upload
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA6tWSsvMSS0tyMlPTElNUbJSKkktLtErqShRqgUA9gNgPBsAAAA=
+      headers:
+        Cache-Control:
+          - no-store
+        Connection:
+          - keep-alive
+        Content-Encoding:
+          - gzip
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Fri, 11 Jun 2021 07:59:51 GMT
+        Expect-CT:
+          - enforce, max-age=86400
+        Expires:
+          - '0'
+        Pragma:
+          - no-cache
+        Set-Cookie:
+          - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+          - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+        Strict-Transport-Security:
+          - max-age=63072000; includeSubDomains
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - accept-encoding
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - DENY
+        X-Gateway-Site-ID:
+          - nginx-router-ssu2q-ap-southeast-1-prod
+        X-Request-Uuid:
+          - ee660d3d243f900236a62f7e9fd50ce0
+        X-Xss-Protection:
+          - 1; mode=block
+      status:
+        code: 200
+        message: OK
 version: 1

@@ -9,23 +9,25 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - pyTenable/0.3.22 (pyTenable/0.3.22; Python/3.6.7)
+      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
+        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
       X-APIKeys:
       - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
     method: GET
-    uri: https://cloud.tenable.com/access-groups?limit=50&offset=0
+    uri: https://cloud.tenable.com/access-groups/filters
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA4WRTWvDMAyG/8rweR527DR2bmXrbWM79LRRguIoJZDEwXYOpeS/T/1Y6WCwm/Tq
-        EZJeHRk4hzFW++DnKbLy68icHxN0I4ZqnruGlQwE1DWg4bnMWq5r23CrWsUL3VgjLEghNHtkLiAk
-        bCpI1JMJabgUXJqtWJXSlJl50iv7Sdw8Nf9whTpx59lFa0EU1nIpUXO9KpAD1MhzAUWthDEaWmJH
-        GJDodd8/rGPEFEmDvq/gkpQpzHhR5ojhJsQEaaaMPb+/fbxutpuXu/3qw48BLlO5RZBcy1xxnSnL
-        oRaSW1M43a6oLNXvxus+8RATDnfe/FGagj99oBv31YTB4Zgq54epx0QYWbvsiIF9N0Lq/MjKI/Nt
-        S1exUjyyvhs6inIKk0/QUwdd5UM6f/I6is6+meJDg4G0BqNjy25ZvgGIsjbOAgIAAA==
+        H4sIAAAAAAAAA6WU30/CMBDH/5Wm8UHjwBef9oYhGhIFlRgeGCylPbBJWUfbORey/922g6hjiz/2
+        1PZ6d5/v9cftcc4Fo0SxeM1BMI3DOU7IFnCAqQJigMWrIj5YspR9sywCvObCgHJheyxTUMRIv8Kw
+        swFbYuirc6MyMUoKHO6xKVLAIQZrKHAZVLTwCLVMRlYC4oN5QCloje6UzFI0drYyqJGcpp5VYaP9
+        dPM5tSIa4W7T1/tFwLE4Yhpk3BNt0INk3EaxUwl/LbZ+kD8A0U3RnXl6nXXmJE9ANYJ+BVCZgD7J
+        dUwolVnSdIzP1gX10GA2RYPKCY2GHYnrHUvaUbdPw3FHAE/frtsBo0e7+8/LcUk38G7X58t5FOVR
+        NIsivbg8u6hrqJLzZBPrQhvYtuuZHD3RtPLs/HBSxRPKUyL6Le/mRYNCV8gP/qPi0ibWUhmX1Y3e
+        u7XB+B/X3m389knrKcsP8OhcELwEAAA=
     headers:
       Cache-Control:
-      - no-cache
+      - no-store
       Connection:
       - keep-alive
       Content-Encoding:
@@ -33,12 +35,14 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 22 Jul 2019 20:04:34 GMT
-      Server:
-      - tenable.io
+      - Wed, 09 Jun 2021 02:46:58 GMT
+      Expect-CT:
+      - enforce, max-age=86400
+      Pragma:
+      - no-cache
       Set-Cookie:
-      - nginx-cloud-site-id=us-2b; path=/; HttpOnly
-      - nginx-cloud-site-id=us-2b; path=/; HttpOnly
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Transfer-Encoding:
@@ -48,9 +52,70 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Gateway-Site-ID:
-      - nginx-router-a-prod-ca-central-1
+      - nginx-router-c3gdt-ap-southeast-1-prod
       X-Request-Uuid:
-      - 69bc53aede956c0022f208db44c5b162
+      - 153919ca96ee467b3137df53885f86cb
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - nginx-cloud-site-id=us-2b
+      User-Agent:
+      - Integration/1.0 (pytest; pytenable-automated-testing; Build/unknown) pyTenable/1.2.8
+        (pyTenable/1.2.8; Python/3.8.6; Windows/AMD64)
+      X-APIKeys:
+      - accessKey=TIO_ACCESS_KEY;secretKey=TIO_SECRET_KEY
+    method: GET
+    uri: https://cloud.tenable.com/access-groups?ft=or&w=match&wf=name&limit=45&offset=2
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAw3LsQqFMAxG4Xf55wxy0SXbfQ4RCTVKoTbS1Kn03e12+OA0SAjqvl/F3sfB60Z4
+        5IpZarQMbrDzdK3gHyHFO46aF0K1Kgk8EdzKsLUhy61gSEp/H4eDYOXQMuxQD+hb7x+O+DJ1cAAA
+        AA==
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 09 Jun 2021 02:46:59 GMT
+      Expect-CT:
+      - enforce, max-age=86400
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+      - nginx-cloud-site-id=us-2b; path=/; HttpOnly; SameSite=Strict; Secure
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - accept-encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Gateway-Site-ID:
+      - nginx-router-c3gdt-ap-southeast-1-prod
+      X-Request-Uuid:
+      - 781b86270d621a7ff2d3d05a5e8874ed
+      X-XSS-Protection:
+      - 1; mode=block
     status:
       code: 200
       message: OK
