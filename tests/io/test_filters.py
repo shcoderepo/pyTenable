@@ -1,6 +1,6 @@
-"""
+'''
 test filters
-"""
+'''
 import pytest
 from tests.checker import check
 
@@ -104,7 +104,6 @@ def test_use_cache_false_filters(api):
         check(data[1], 'name', str, allow_none=True)
         check(data[1], 'readable_name', str, allow_none=True)
         check(data[1], 'control', dict, allow_none=True)
-
 
 @pytest.mark.vcr()
 def test_access_group_asset_rules_filters_v2(api):
