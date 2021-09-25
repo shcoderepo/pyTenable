@@ -5,7 +5,6 @@ import uuid
 import pytest
 from tenable.errors import UnexpectedValueError, APIError
 from tests.checker import check
-from tests.pytenable_log_handler import log_exception
 
 @pytest.fixture(name='rules')
 def fixture_rules():
@@ -19,15 +18,14 @@ def fixture_agroup(request, api, rules):
     '''
     Fixture to create access_group
     '''
-    group = api.access_groups.create(str(uuid.uuid4()), rules)
+    group = api.access_groups.create('Example', rules)
     def teardown():
         '''
         cleanup function to delete access_group
         '''
         try:
             api.access_groups.delete(group['id'])
-        except APIError as err:
-            log_exception(err)
+        except APIError:
             pass
 
     request.addfinalizer(teardown)
@@ -208,7 +206,7 @@ def test_access_group_edit_success(api, agroup):
     '''
     test to edit access group
     '''
-    group = api.access_groups.edit(agroup['id'], name=str(uuid.uuid4()))
+    group = api.access_groups.edit(agroup['id'], name='Updated')
     assert isinstance(group, dict)
     check(group, 'created_at', 'datetime')
     check(group, 'updated_at', 'datetime')
@@ -380,8 +378,7 @@ def test_access_groups_list(api):
         check(group, 'all_assets', bool)
         check(group, 'all_users', bool)
         #check(group, 'created_by_uuid', 'uuid') # Will not return for default group
-        if 'updated_by_uuid' in group:
-            check(group, 'updated_by_uuid', 'uuid')
+        check(group, 'updated_by_uuid', 'uuid')
         check(group, 'created_by_name', str)
         check(group, 'updated_by_name', str)
         check(group, 'processing_percent_complete', int)

@@ -6,7 +6,6 @@ import pytest
 from tenable.errors import UnexpectedValueError, APIError
 from tests.checker import check
 from tests.io.test_groups import fixture_group
-from tests.pytenable_log_handler import log_exception
 
 @pytest.fixture(name='rules')
 def fixture_rules():
@@ -22,7 +21,7 @@ def fixture_agroup(request, api, vcr, rules):
     Fixture to create access_group
     '''
     with vcr.use_cassette('test_access_groups_v2_create_success'):
-        group = api.access_groups_v2.create(str(uuid.uuid4()), rules)
+        group = api.access_groups_v2.create('Example', rules)
 
     def teardown():
         '''
@@ -31,8 +30,7 @@ def fixture_agroup(request, api, vcr, rules):
         try:
             with vcr.use_cassette('test_access_groups_v2_delete_success'):
                 api.access_groups_v2.delete(group['id'])
-        except APIError as api_exception:
-            log_exception(api_exception)
+        except APIError:
             pass
 
     request.addfinalizer(teardown)
@@ -300,11 +298,11 @@ def test_access_group_v2_edit_id_unexpectedvalueerror(api):
 
 
 @pytest.mark.vcr()
-def test_access_groups_v2_edit_success(api, agroup):
+def test_access_group_v2_edit_success(api, agroup):
     '''
     test to edit access group
     '''
-    resp = api.access_groups_v2.edit(agroup['id'], name=str(uuid.uuid4()), all_users=False)
+    resp = api.access_groups_v2.edit(agroup['id'], name='Updated', all_users=False)
     assert isinstance(resp, dict)
     check(resp, 'created_at', 'datetime')
     check(resp, 'updated_at', 'datetime')
@@ -337,7 +335,7 @@ def test_access_groups_v2_details_success(api):
     '''
     test to get details of specific access group
     '''
-    group = api.access_groups_v2.create(str(uuid.uuid4()), [('ipv4', 'eq', ['192.168.0.0/24'])])
+    group = api.access_groups_v2.create('Test', [('ipv4', 'eq', ['192.168.0.0/24'])])
     resp = api.access_groups_v2.details(group['id'])
     assert isinstance(resp, dict)
     check(resp, 'created_at', 'datetime')

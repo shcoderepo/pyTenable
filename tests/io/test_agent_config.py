@@ -2,8 +2,8 @@
 test agent_config
 '''
 import pytest
-from tests.checker import check
 from tenable.errors import UnexpectedValueError, PermissionError
+from tests.checker import check
 
 
 @pytest.mark.vcr()
@@ -124,6 +124,7 @@ def test_agentconfig_show_standard_user_should_fail(stdapi):
         stdapi.agent_config.details()
 
 
+# --------------------------------------------------------------------------------------------------
 @pytest.mark.vcr()
 def test_agentconfig_show_details_fields(api):
     '''
