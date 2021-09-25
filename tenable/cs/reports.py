@@ -2,7 +2,7 @@
 reports
 =======
 
-The reports methods allow interaction into ContainerSecurity 
+The reports methods allow interaction into ContainerSecurity
 reports API.
 
 Methods available on ``cs.reports``:
@@ -13,9 +13,12 @@ Methods available on ``cs.reports``:
     .. automethod:: report
 '''
 from .base import CSEndpoint
+from typing import Dict
 
 class ReportAPI(CSEndpoint):
-    def report(self, digest):
+    def report(
+            self,
+            digest: str) -> Dict:
         '''
         Retrieves the image report by the image digest.
 
@@ -25,5 +28,6 @@ class ReportAPI(CSEndpoint):
         Returns:
             dict: The report resource record.
         '''
-        return self._api.get('reports/{}'.format(
-            self._check('digest', digest, str))).json()
+
+        _digest = self._check('digest', digest, str)
+        return self._api.get(f'reports/{_digest}').json()

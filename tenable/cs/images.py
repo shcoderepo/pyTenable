@@ -2,7 +2,7 @@
 images
 ======
 
-The images methods allow interaction into ContainerSecurity 
+The images methods allow interaction into ContainerSecurity
 image API.
 
 Methods available on ``cs.images``:
@@ -14,10 +14,11 @@ Methods available on ``cs.images``:
     .. automethod:: details
     .. automethod:: list
 '''
+from typing import Dict, List
 from .base import CSEndpoint, CSIterator
 
 class ImageIterator(CSIterator):
-    def _get_data(self):
+    def _get_data(self) -> Dict:
         query = self._query
         query['offset'] = self._offset
         query['limit'] = self._limit
@@ -25,7 +26,7 @@ class ImageIterator(CSIterator):
 
 
 class ImageAPI(CSEndpoint):
-    def list(self, **kw):
+    def list(self, **kw) -> List:
         '''
         Retrieves the list of images stores in ContainerSecurity.
 
@@ -36,7 +37,7 @@ class ImageAPI(CSEndpoint):
                 Limits the response to images with the specified image id.
             name (str, optional):
                 Limits the response to images with the specified name.
-            limit (int, optional): 
+            limit (int, optional):
                 The number of items to return for each page.  The default if
                 not specified is 50.
             offset (int, optional):
@@ -63,8 +64,10 @@ class ImageAPI(CSEndpoint):
             >>> for image in cs.images.list():
             ...     pprint(image)
         '''
-        query = dict()
-        
+        # query = dict()
+        # query: Dict[str, Union[Dict[str, int], Dict[str, IO]]] = dict()
+        query: Dict = dict()
+
         if 'has_malware' in kw:
             query['hasMalware'] = self._check(
                 'has_malware', kw['has_malware'], bool)
@@ -82,7 +85,7 @@ class ImageAPI(CSEndpoint):
                 'score_value', kw['score_value'], int)
         if 'score_operator' in kw:
             query['scoreOperator'] = self._check(
-                'score_operator', kw['score_operator'], str, 
+                'score_operator', kw['score_operator'], str,
                 choices=['EQ', 'LT', 'GT'],
                 case='upper')
         if 'tag' in kw:
@@ -97,12 +100,16 @@ class ImageAPI(CSEndpoint):
                 'pages', kw['pages'], int) if 'pages' in kw else None,
             _query=query)
 
-    def details(self, repository, image, tag):
+    def details(
+            self,
+            repository: str,
+            image: str,
+            tag: str) -> Dict:
         '''
         Returns the details of a specified image.
 
         Args:
-            repository (str): 
+            repository (str):
                 The name of the repository that the image resides within.
             image (str):
                 The image name.
@@ -116,18 +123,27 @@ class ImageAPI(CSEndpoint):
             >>> image = cs.images.details('library', 'apache', 'latest')
         '''
 
-        return self._api.get('images/{}/{}/{}'.format(
-            self._check('repository', repository, str),
-            self._check('image', image, str),
-            self._check('tag', tag, str)
-        )).json()
+        # return self._api.get('images/{}/{}/{}'.format(
+        #     self._check('repository', repository, str),
+        #     self._check('image', image, str),
+        #     self._check('tag', tag, str)
+        # )).json()
 
-    def delete(self, repository, image, tag):
+        _repository = self.__check('repository', repository, str)
+        _image = self._check('image', image, str)
+        _tag = self._check('tag', tag, str)
+        return self._api.get(f'images/{_repository}/{_image}/{_tag}').json()
+
+    def delete(
+            self,
+            repository: str,
+            image: str,
+            tag: str) -> Dict:
         '''
         Removes the specified image from ContainerSecurity
 
         Args:
-            repository (str): 
+            repository (str):
                 The name of the repository that the image resides within.
             image (str):
                 The image name.
@@ -141,8 +157,8 @@ class ImageAPI(CSEndpoint):
             >>> cs.images.delete('library', 'apache', 'latest')
         '''
 
-        return self._api.delete('images/{}/{}/{}'.format(
-            self._check('repository', repository, str),
-            self._check('image', image, str),
-            self._check('tag', tag, str)
-        ))
+
+        _repository = self._check('repository', repository, str)
+        _image = self._check('image', image, str)
+        _tag = self._check('tag', tag, str)
+        return self._api.delete(f'images/{_repository}/{_image}/{_tag}')

@@ -2,7 +2,7 @@
 usage
 =====
 
-The usage methods allow interaction into ContainerSecurity 
+The usage methods allow interaction into ContainerSecurity
 usage API.
 
 Methods available on ``cs.usage``:
@@ -13,9 +13,10 @@ Methods available on ``cs.usage``:
     .. automethod:: stats
 '''
 from .base import CSEndpoint
+from typing import  Dict
 
 class UsageAPI(CSEndpoint):
-    def stats(self):
+    def stats(self)-> Dict:
         '''
         Returns the usage statistics for ContainerSecurity
 

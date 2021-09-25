@@ -15,9 +15,10 @@ Methods available on ``cs.repositories``:
     .. automethod:: list
 '''
 from .base import CSEndpoint, CSIterator
+from typing import Dict, List
 
 class RepositoryIterator(CSIterator):
-    def _get_data(self):
+    def _get_data(self) -> Dict:
         query = self._query
         query['offset'] = self._offset
         query['limit'] = self._limit
@@ -25,7 +26,7 @@ class RepositoryIterator(CSIterator):
 
 
 class RepositoryAPI(CSEndpoint):
-    def list(self, **kw):
+    def list(self, **kw) -> List:
         '''
         Retrieves a list of repositories configured within ContainerSecurity.
 
@@ -53,7 +54,9 @@ class RepositoryAPI(CSEndpoint):
             >>> for repository in cs.repository.list():
             ...     pprint(repository)
         '''
-        query = dict()
+        # query = dict()
+        # query: Dict[str, Union[Dict[str, int], Dict[str, IO]]] = dict()
+        query: Dict = dict()
 
         if 'contains' in kw:
             query['nameContains'] = self._check('contains', kw['contains'], str)
@@ -69,7 +72,9 @@ class RepositoryAPI(CSEndpoint):
                 'pages', kw['pages'], int) if 'pages' in kw else None,
             _query=query)
 
-    def details(self, name):
+    def details(
+            self,
+            name: str) -> List:
         '''
         Retrieves the list of images for the specified repository.
 
@@ -83,10 +88,15 @@ class RepositoryAPI(CSEndpoint):
             >>> for image in cs.repository.details('library'):
             ...     pprint(image)
         '''
-        return self._api.get('repositories/{}'.format(
-            self._check('name', name, str))).json()
+        # return self._api.get('repositories/{}'.format(
+        #     self._check('name', name, str))).json()
 
-    def delete(self, name):
+        _name = self._check('name', name, str)
+        return self._api.get(f'repositories/{_name}').json()
+
+    def delete(
+            self,
+            name: str) -> None:
         '''
         Removes the specified repository.
 
@@ -99,5 +109,6 @@ class RepositoryAPI(CSEndpoint):
         Examples:
             >>> cs.repository.delete('library')
         '''
-        self._api.delete('repositories/{}'.format(
-            self._check('name', name, str)))
+
+        _name = self._check('name', name, str)
+        self._api.delete(f'repositories/{_name}')

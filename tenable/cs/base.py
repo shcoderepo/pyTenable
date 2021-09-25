@@ -1,5 +1,8 @@
 from tenable.base import APIResultsIterator, APIEndpoint
 
+from typing import Dict
+
+
 class CSEndpoint(APIEndpoint):
     pass
 
@@ -10,7 +13,7 @@ class CSIterator(APIResultsIterator):
         '''
         return None
 
-    def _get_page(self):
+    def _get_page(self) -> Dict:
         '''
         Get the next page of records
         '''
@@ -23,7 +26,7 @@ class CSIterator(APIResultsIterator):
         # Lets make the actual call at this point.
         resp = self._get_data()
 
-        # Now that we have the response, lets reset any counters we need to, 
+        # Now that we have the response, lets reset any counters we need to,
         # and increment things like the page counter, offset, etc.
         self.page_count = 0
         self._pages_requested += 1

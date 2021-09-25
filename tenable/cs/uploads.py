@@ -14,9 +14,15 @@ Methods available on ``cs.uploads``:
 '''
 from .base import CSEndpoint
 from tenable.errors import PackageMissingError
+from typing import Optional
 
 class UploadAPI(CSEndpoint):
-    def docker_push(self, name, tag=None, cs_name=None, cs_tag=None):
+    def docker_push(
+            self,
+            name: str,
+            tag: Optional[str] = None,
+            cs_name: Optional[str] = None,
+            cs_tag: Optional[str] = None) -> str:
         '''
         Uploads an image into Tenable.io Container Security using docker.
 
@@ -50,7 +56,7 @@ class UploadAPI(CSEndpoint):
         self._check('cs_tag', cs_tag, str)
 
         if not cs_name:
-            cs_name = 'library/{}'.format(name)
+            cs_name = f'library/{name}'
 
         if not cs_tag:
             if not tag:
@@ -59,10 +65,10 @@ class UploadAPI(CSEndpoint):
                 cs_tag = 'latest'
 
         # get the image from the docker daemon.
-        image = d.images.get('{}:{}'.format(name, tag) if tag else name)
+        image = d.images.get(f'{name}:{tag}') if tag else name
 
         # build the remote tag
-        remote = '{}/{}'.format(self._api._registry, cs_name)
+        remote = f'{self._api_.registry}/{cs_name}'
 
         # upload the image to CS
 
@@ -71,7 +77,8 @@ class UploadAPI(CSEndpoint):
             'username': self._api._access_key,
             'password': self._api._secret_key
         })
-        d.images.remove('{}:{}'.format(remote, cs_tag))
+        # d.images.remove('{}:{}'.format(remote, cs_tag))
+        d.images.remove(f'{remote}:{cs_tag}')
 
         # return the image id
         return image.id.split(':')[1][:12]
