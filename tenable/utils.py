@@ -21,7 +21,7 @@ def policy_settings(item):
             item['default'] = ""
         resp[item['id']] = item['default']
 
-    for key in item.keys():
+    for key in list(item.keys()):
         # here we will attempt to recurse down both a list of sub-
         # documents and an explicitly defined sub-document within the
         # editor data-structure.

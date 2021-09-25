@@ -311,8 +311,7 @@ class ScansAPI(TIOEndpoint):
 
             # Now we have to remove unused keys from rrules and create rrules structure required by scan
             # 'FREQ=ONETIME;INTERVAL=1', FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,TH,FR', 'FREQ=MONTHLY;INTERVAL=1;BYMONTHDAY=22'
-            schedule[self.schedule_const.rrules] = ';'.join(dict_clean(rrules).values())
-
+            schedule[self.schedule_const.rrules] = ';'.join(list(dict_clean(rrules).values()))
             # Set enable and launch key for schedule
             schedule[self.schedule_const.enabled] = True
             schedule[self.schedule_const.launch] = launch
@@ -435,8 +434,7 @@ class ScansAPI(TIOEndpoint):
 
             # Now we have to remove unused keys from rrules and create rrules structure required by scan
             # 'FREQ=ONETIME;INTERVAL=1', FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,TH,FR', 'FREQ=MONTHLY;INTERVAL=1;BYMONTHDAY=22'
-            schedule[self.schedule_const.rrules] = ';'.join(dict_clean(rrules).values())
-
+            schedule[self.schedule_const.rrules] = ';'.join(list(dict_clean(rrules).values()))
             # Set enable and launch key for schedule
             schedule[self.schedule_const.enabled] = True
             schedule[self.schedule_const.launch] = launch

@@ -21,6 +21,6 @@ def single(var, val_type):
         elif val_type == 'scanner-uuid':
             assert len(re.findall(reuuids, var)) > 0
         elif sys.version_info.major == 2 and val_type == str:
-            assert isinstance(var, unicode) or isinstance(var, str)
+            assert isinstance(var, str) or isinstance(var, str)
         else:
             assert isinstance(var, val_type)

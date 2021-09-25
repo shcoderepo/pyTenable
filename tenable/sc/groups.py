@@ -42,7 +42,7 @@ class GroupAPI(SCEndpoint):
             'report_cards': 'arcs',
             'audit_files': 'auditFiles'
         }
-        for k, v in mapping.items():
+        for k, v in list(mapping.items()):
             if k in kw:
                 # For each item in the mapping, expand the kwarg if it exists
                 # into a list of dictionaries with an id attribute.  Associate

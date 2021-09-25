@@ -534,7 +534,7 @@ class TagsAPI(TIOEndpoint):
                 choices=['AND', 'OR'], case='upper')
         if sort and self._check('sort', sort, tuple):
             query['sort'] = ','.join(['{}:{}'.format(
-                self._check('sort_field', i[0], str, choices=[k for k in filterdefs.keys()]),
+                self._check('sort_field', i[0], str, choices=[k for k in list(filterdefs.keys())]),
                 self._check('sort_direction', i[1], str, choices=['asc', 'desc'])
             ) for i in sort])
         return query

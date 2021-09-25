@@ -66,7 +66,7 @@ class PluginIterator(TIOIterator):
         for family in self._api.plugins.families():
             self._maptable['families'][family['id']] = family['name']
 
-        for fam_id in self._maptable['families'].keys():
+        for fam_id in list(self._maptable['families'].keys()):
             for plugin in self._api.plugins.family_details(fam_id)['plugins']:
                 self._maptable['plugins'][plugin['id']] = fam_id
 

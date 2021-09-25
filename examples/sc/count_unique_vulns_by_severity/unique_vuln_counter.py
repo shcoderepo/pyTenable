@@ -15,4 +15,4 @@ for vuln in sc.analysis.vulns(('severity', '=', '4,3,2,1'), tool='sumid'):
         sevs[vuln['severity']['name']] += 1
 
 # Output the final counts:
-print('Crits : {Critical}\nHighs : {High}\nMediums : {Medium}\nLows : {Low}'.format(**sevs))
+print(('Crits : {Critical}\nHighs : {High}\nMediums : {Medium}\nLows : {Low}'.format(**sevs)))

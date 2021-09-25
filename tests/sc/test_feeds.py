@@ -32,7 +32,7 @@ def test_feeds_success(security_center):
     '''
     feed = security_center.feeds.status()
     assert isinstance(feed, dict)
-    for key in feed.keys():
+    for key in list(feed.keys()):
         check(feed[key], 'updateTime', str)
         check(feed[key], 'stale', str)
         check(feed[key], 'updateRunning', str)

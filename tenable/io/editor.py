@@ -24,6 +24,7 @@ from .base import TIOEndpoint
 from tenable.utils import dict_merge, policy_settings
 from io import BytesIO
 
+
 class EditorAPI(TIOEndpoint):
     def parse_creds(self, data):
         '''
@@ -293,7 +294,7 @@ class EditorAPI(TIOEndpoint):
 
         # graft on the basic settings that aren't stored in any input sections.
         for item in editor['settings']['basic']['groups']:
-            for setting in item.keys():
+            for setting in list(item.keys()):
                 if setting not in ['name', 'title', 'inputs', 'sections']:
                     obj['settings'][setting] = item[setting]
 

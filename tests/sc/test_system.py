@@ -1,5 +1,6 @@
 import zipfile
 import pytest
+
 from ..checker import check
 from tenable.errors import UnexpectedValueError
 
@@ -85,7 +86,7 @@ def test_system_current_locale_success(admin):
 def test_system_list_locales_success(admin):
     l = admin.system.list_locales()
     assert isinstance(l, dict)
-    for key in l.keys():
+    for key in list(l.keys()):
         check(l[key], 'code', str)
         check(l[key], 'name', str)
 
